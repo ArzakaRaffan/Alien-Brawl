@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbgwmuqp747ea"]
+
+[ext_resource type="Script" uid="uid://lxrg7lmed3w7" path="res://Main/Minigame_1/test/projectiletest.gd" id="1_ipvd6"]
+[ext_resource type="PackedScene" uid="uid://b17g3yrgu2thg" path="res://Main/Minigame_1/Scenes/bullet.tscn" id="1_ns7os"]
+
+[node name="projectiletest" type="Node2D"]
+script = ExtResource("1_ipvd6")
+
+[node name="bullet" parent="." instance=ExtResource("1_ns7os")]
+position = Vector2(130, 594)
+
+[node name="resetbutton" type="Button" parent="."]
+offset_left = 72.0
+offset_top = 37.0
+offset_right = 179.0
+offset_bottom = 94.0
+text = "RESET"
+
+[connection signal="pressed" from="resetbutton" to="." method="_on_resetbutton_pressed"]
