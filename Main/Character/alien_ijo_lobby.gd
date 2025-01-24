@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name MC_Select_Amo
+class_name MC
 
 var SPEED = 300.0
 var fly:bool = false
