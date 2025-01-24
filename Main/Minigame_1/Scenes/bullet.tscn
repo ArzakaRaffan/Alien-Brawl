@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b17g3yrgu2thg"]
+
+[ext_resource type="Script" uid="uid://bbcs37t0hjg8r" path="res://Main/Minigame_1/Scenes/bullet.gd" id="1_3viis"]
+[ext_resource type="Texture2D" uid="uid://crglfbldab1yq" path="res://icon.svg" id="1_mqovh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqovh"]
+height = 20.0
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_3viis")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-0.100704, -1)
+rotation = 1.5708
+scale = Vector2(0.105666, 0.529998)
+texture = ExtResource("1_mqovh")
+offset = Vector2(0, 64.89)
+
+[node name="bullet_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-11, 0)
+shape = SubResource("CapsuleShape2D_mqovh")

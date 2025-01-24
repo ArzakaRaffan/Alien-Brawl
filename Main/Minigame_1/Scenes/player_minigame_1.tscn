@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b42khlsi8hps1"]
+
+[ext_resource type="Texture2D" uid="uid://crglfbldab1yq" path="res://icon.svg" id="1_h6n5g"]
+[ext_resource type="Script" uid="uid://cn4u6f2wqmgp2" path="res://Main/Minigame_1/Scripts/player_minigame_1.gd" id="1_jvihf"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jvihf"]
+radius = 17.0
+height = 60.0
+
+[node name="player_minigame1" type="CharacterBody2D"]
+script = ExtResource("1_jvihf")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.43051e-06, 0.5)
+scale = Vector2(0.265625, 0.460937)
+texture = ExtResource("1_h6n5g")
+
+[node name="m1_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jvihf")
+
+[node name="m1_marker" type="Marker2D" parent="."]
+position = Vector2(16, -17)
