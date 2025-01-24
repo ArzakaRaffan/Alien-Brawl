@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coo8iu2ei6nk1"
-path="res://.godot/imported/AlienIjo_Win.png-64a6993d3af4e2f18b6246541d5be95c.ctex"
+uid="uid://bugmvq5epec35"
+path="res://.godot/imported/pixil-frame-0.png-6ec2c6138d3b64f9a7917da70ac35f39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Win.png"
-dest_files=["res://.godot/imported/AlienIjo_Win.png-64a6993d3af4e2f18b6246541d5be95c.ctex"]
+source_file="res://Assets/Background/pixil-frame-0.png"
+dest_files=["res://.godot/imported/pixil-frame-0.png-6ec2c6138d3b64f9a7917da70ac35f39.ctex"]
 
 [params]
 

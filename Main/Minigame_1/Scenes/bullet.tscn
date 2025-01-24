@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b17g3yrgu2thg"]
+
+[ext_resource type="Script" uid="uid://bbcs37t0hjg8r" path="res://Main/Minigame_1/Scripts/bullet.gd" id="1_3viis"]
+[ext_resource type="Texture2D" uid="uid://bugmvq5epec35" path="res://Assets/Background/pixil-frame-0.png" id="2_3viis"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mqovh"]
+radius = 5.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wly0t"]
+radius = 6.0
+
+[node name="bullet" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_3viis")
+
+[node name="bullet_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_mqovh")
+
+[node name="bullet_hitbox" type="Area2D" parent="."]
+
+[node name="hitboxcoll" type="CollisionShape2D" parent="bullet_hitbox"]
+shape = SubResource("CircleShape2D_wly0t")
+
+[node name="Pixil-frame-0" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_3viis")
+
+[connection signal="body_entered" from="bullet_hitbox" to="." method="_on_bullet_hitbox_body_entered"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coo8iu2ei6nk1"
-path="res://.godot/imported/AlienIjo_Win.png-64a6993d3af4e2f18b6246541d5be95c.ctex"
+uid="uid://c8bljpaniga4i"
+path="res://.godot/imported/MoonBaseScapeTileSet.png-28de4a3e502e5ba1bc9335610fd82406.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Win.png"
-dest_files=["res://.godot/imported/AlienIjo_Win.png-64a6993d3af4e2f18b6246541d5be95c.ctex"]
+source_file="res://Assets/Temp/MoonBaseScapeTileSet.png"
+dest_files=["res://.godot/imported/MoonBaseScapeTileSet.png-28de4a3e502e5ba1bc9335610fd82406.ctex"]
 
 [params]
 
