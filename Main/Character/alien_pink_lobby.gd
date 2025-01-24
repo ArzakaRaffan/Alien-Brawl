@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name MC_Select_Amo
+class_name MC_Pink
 
 var SPEED = 300.0
 var fly:bool = false
@@ -24,14 +24,14 @@ func _physics_process(delta: float) -> void:
 			queue_free()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_right") and is_on_floor():
+	if Input.is_action_just_pressed("d") and is_on_floor():
 		anim.play("jumpwhile")
 		velocity.y = JUMP_VELOCITY*1.1
 	elif is_on_floor():
 		anim.play("run")
 	velocity.x = SPEED
 	
-	if Input.is_action_just_pressed("ui_left"):
+	if Input.is_action_just_pressed("a"):
 		SPEED*=-1
 		anim.flip_h = !anim.flip_h
 		
