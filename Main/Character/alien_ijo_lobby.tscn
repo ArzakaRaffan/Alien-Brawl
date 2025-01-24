@@ -1,11 +1,11 @@
 [gd_scene load_steps=59 format=3 uid="uid://gaxyr5u5a0y2"]
 
 [ext_resource type="Script" uid="uid://dhj4lnxql35ry" path="res://Main/Character/alien_ijo_lobby.gd" id="1_vdagv"]
-[ext_resource type="Texture2D" uid="uid://b2uwhsdi31i55" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Idle.png" id="2_vdagv"]
-[ext_resource type="Texture2D" uid="uid://rk5c2o4geu7k" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Run.png" id="3_r4jn7"]
-[ext_resource type="Texture2D" uid="uid://21bmla3gka8e" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpEnd.png" id="3_u8ndq"]
-[ext_resource type="Texture2D" uid="uid://bgmwmb4eqq2ls" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpStart.png" id="4_xso47"]
-[ext_resource type="Texture2D" uid="uid://cc4rhpfdf6m6q" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpWhile.png" id="5_8r1s4"]
+[ext_resource type="Texture2D" uid="uid://cl1m0ct6xixps" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Idle.png" id="2_vdagv"]
+[ext_resource type="Texture2D" uid="uid://bf2kmpjelamsj" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_Run.png" id="3_r4jn7"]
+[ext_resource type="Texture2D" uid="uid://dfq02molkms3f" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpEnd.png" id="3_u8ndq"]
+[ext_resource type="Texture2D" uid="uid://b868bf8loixpn" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpStart.png" id="4_xso47"]
+[ext_resource type="Texture2D" uid="uid://cbyimwlfuimeu" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienIjo_JumpWhile.png" id="5_8r1s4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r4jn7"]
 atlas = ExtResource("2_vdagv")

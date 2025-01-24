@@ -819,8 +819,8 @@ size = Vector2(90, 90)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eja3a"]
 size = Vector2(90, 90)
 
-[sub_resource type="Animation" id="Animation_7g8jv"]
-resource_name = "bounce"
+[sub_resource type="Animation" id="Animation_hov7q"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -834,8 +834,8 @@ tracks/0/keys = {
 "values": [Vector2(500, 499)]
 }
 
-[sub_resource type="Animation" id="Animation_hov7q"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_7g8jv"]
+resource_name = "bounce"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

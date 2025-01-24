@@ -1,10 +1,10 @@
 [gd_scene load_steps=58 format=3 uid="uid://bsxskd0h0uld"]
 
 [ext_resource type="Script" uid="uid://dhf08eqfdk6oo" path="res://Main/Character/alien_pink_lobby.gd" id="1_dvepu"]
-[ext_resource type="Texture2D" uid="uid://ck75g3leosewp" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink__JumpEnd.png" id="2_0hodq"]
-[ext_resource type="Texture2D" uid="uid://j3spie4ssa06" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_JumpStart.png" id="3_dvepu"]
-[ext_resource type="Texture2D" uid="uid://crvxe4gco2uqo" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_JumpWhile.png" id="5_pm6p3"]
-[ext_resource type="Texture2D" uid="uid://cec0bwq6eonh" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_Run.png" id="6_ajbif"]
+[ext_resource type="Texture2D" uid="uid://iku8qof3wpl4" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink__JumpEnd.png" id="2_0hodq"]
+[ext_resource type="Texture2D" uid="uid://bbjvq5urkok1d" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_JumpStart.png" id="3_dvepu"]
+[ext_resource type="Texture2D" uid="uid://boglrr8kb8ybw" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_JumpWhile.png" id="5_pm6p3"]
+[ext_resource type="Texture2D" uid="uid://bqyg0u2alr0wn" path="res://Assets/Character/AnimasiAlienIjoAlienPink/AlienPink_Run.png" id="6_ajbif"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pm6p3"]
 atlas = ExtResource("2_0hodq")
