@@ -34,6 +34,8 @@ var def_cam_pos:Vector2
 @onready var stone_ad: AnimatedSprite2D = $"Stone Template/stone_AD"
 @onready var rock_bottom_up: Sprite2D = $"Player1/rock bottom_up"
 @onready var rock_bottom_down: Sprite2D = $"Player2/rock bottom_down"
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var label: Label = $Label
 var count = 0
 var cor_x = 512
 var cor_y1 = 392
@@ -366,6 +368,9 @@ func _on_player_2_animation_finished() -> void:
 	shadow_2.play("default")
 
 func p1_win():
+	label.type("PLAYER 1\nWINS")
+	label.position = camera_2d.position-Vector2(550,450)
+	animation_player.play("win_scene")
 	p1cant_press = true
 	p2cant_press = true
 	flag_p2win = true
@@ -385,6 +390,9 @@ func p1_win():
 		await get_tree().create_timer(1.05).timeout
 
 func p2_win():
+	label.type("PLAYER 2\nWINS")
+	label.position = camera_2d.position-Vector2(550,450)
+	animation_player.play("win_scene")
 	p1cant_press = true
 	p2cant_press = true
 	rock_bottom_down.show()
