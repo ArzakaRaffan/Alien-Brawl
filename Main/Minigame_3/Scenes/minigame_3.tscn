@@ -154,6 +154,7 @@ size = Vector2(91, 10.5)
 size = Vector2(6.46106, 172.192)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_twx2w"]
+friction = 0.0
 bounce = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3qu0v"]

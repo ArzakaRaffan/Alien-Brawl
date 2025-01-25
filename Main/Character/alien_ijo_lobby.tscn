@@ -393,6 +393,7 @@ height = 112.0
 script = ExtResource("1_vdagv")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_r0l6u")
 animation = &"run"
 autoplay = "run"
@@ -402,7 +403,17 @@ position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_c1xxi")
 
 [node name="Right" type="RayCast2D" parent="."]
+position = Vector2(0, 56)
+target_position = Vector2(38, 0)
+
+[node name="Right2" type="RayCast2D" parent="."]
+texture_filter = 1
 target_position = Vector2(38, 0)
 
 [node name="Left" type="RayCast2D" parent="."]
+position = Vector2(0, 56)
+target_position = Vector2(-38, 0)
+
+[node name="Left2" type="RayCast2D" parent="."]
+texture_filter = 1
 target_position = Vector2(-38, 0)

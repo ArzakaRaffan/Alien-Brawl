@@ -4,6 +4,8 @@ extends StaticBody2D
 @export var gravity:float =  3000.0
 @onready var label_1: Label = $Label1
 @onready var label_2: Label = $Label2
+@onready var polygon_1: Sprite2D = $"Polygon1"
+@onready var polygon_2: Sprite2D = $"Polygon2"
 
 var orig_y_position
 var y_speed:float = 0.0 
@@ -12,9 +14,6 @@ var ready_player_two:bool = false
 
 func _ready() -> void:
 	orig_y_position = position.y
-
-func _process(delta: float) -> void:
-	pass
 	
 func _bounce() -> void:
 	var tween = get_tree().create_tween()
@@ -36,14 +35,28 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			ready_two()
 
 func ready_one():
+	unready_all_one()
 	ready_player_one = true
 	label_1.show()
+	polygon_1.show()
 func ready_two():
+	unready_all_two()
 	ready_player_two = true
 	label_2.show()
+	polygon_2.show()
 func unready_one():
 	ready_player_one = false
 	label_1.hide()
+	polygon_1.hide()
 func unready_two():
 	ready_player_two = false
 	label_2.hide()
+	polygon_2.hide()
+
+func unready_all_one():
+	for i in range (get_parent().get_child_count()) :
+		get_parent().get_child(i).unready_one()
+		
+func unready_all_two():
+	for i in range (get_parent().get_child_count()) :
+		get_parent().get_child(i).unready_two()

@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -400.0
 @onready var right: RayCast2D = $Right
 @onready var left: RayCast2D = $Left
 @onready var anim: AnimatedSprite2D = $anim
+@onready var right2: RayCast2D = $Right2
+@onready var left2: RayCast2D = $Left2
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -35,11 +37,11 @@ func _physics_process(delta: float) -> void:
 		SPEED*=-1
 		anim.flip_h = !anim.flip_h
 		
-	if right.is_colliding():
+	if right.is_colliding() or right2.is_colliding():
 		SPEED=-300
 		anim.flip_h = true
 	
-	if left.is_colliding():
+	if left.is_colliding() or left2.is_colliding():
 		SPEED=300
 		anim.flip_h = false
 

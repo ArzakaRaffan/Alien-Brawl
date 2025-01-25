@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/Spaceship.png-e36d046ff12b64b9fa7700238fd77e77.ctex"
+uid="uid://cskc4esqtmpum"
+path="res://.godot/imported/Bintang.png-e5cfc8dd96de2433040f7ad471c488de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Spaceship.png"
-dest_files=["res://.godot/imported/Spaceship.png-e36d046ff12b64b9fa7700238fd77e77.ctex"]
+source_file="res://Assets/Lobby/Bintang.png"
+dest_files=["res://.godot/imported/Bintang.png-e5cfc8dd96de2433040f7ad471c488de.ctex"]
 
 [params]
 

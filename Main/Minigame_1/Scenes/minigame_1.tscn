@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dpjuoaqfwdtk7" path="res://Assets/Temp/RunnerTileSet.png" id="1_n6olu"]
 [ext_resource type="Script" uid="uid://cdvmlkl0ebbf0" path="res://Main/Minigame_1/Scenes/minigame_1.gd" id="1_p582i"]
-[ext_resource type="Texture2D" uid="uid://hrvlcj0e7c6o" path="res://Assets/Background/SPACESHIP.png" id="2_xuc20"]
+[ext_resource type="Texture2D" uid="uid://hrvlcj0e7c6o" path="res://Assets/Background/Spaceship.png" id="2_xuc20"]
 [ext_resource type="PackedScene" uid="uid://mml2iy52ic7e" path="res://Main/Minigame_1/Scenes/character_minigame1.tscn" id="3_ouva8"]
 [ext_resource type="PackedScene" uid="uid://ck8jcwrdt7tad" path="res://Main/Minigame_1/Scenes/enemy_minigame1.tscn" id="4_ouva8"]
 [ext_resource type="Script" uid="uid://ddyabcotkg1ar" path="res://Main/Minigame_1/Scenes/parallax_background.gd" id="5_xuc20"]
