@@ -28,8 +28,9 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("dead")
 		await $AnimatedSprite2D.animation_finished
 		await get_tree().create_timer(2).timeout
-		label.type("PLAYER 2\n WINS")
+		label.type("PLAYER 2\nWINS")
 		label.add_theme_color_override("font_color", Color.from_rgba8(181, 219, 116, 1))
+		label.show()
 		animation_player.play("win_scene")
 	
 	if is_dead or is_win:
@@ -53,11 +54,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_left"):
 		SPEED *= -1
 
-	if right.is_colliding():
-		SPEED = -300
-
-	if left.is_colliding():
-		SPEED = 300
+	#if right.is_colliding():
+		#SPEED = -300
+#
+	#if left.is_colliding():
+		#SPEED = 300
 
 	move_and_slide()
 
