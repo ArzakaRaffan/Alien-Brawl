@@ -26,9 +26,9 @@ func _on_gawang_pink_body_entered(body: Node2D) -> void:
 		$Timer.start()
 
 func reset() -> void:
-	$AlienIjo.position = Vector2(370, 463)
-	$AlienPink.position = Vector2(1235, 463)
-	$Ball.global_transform.origin = Vector2(808, 229)
+	$AlienIjo.position = Vector2(1322, 685)
+	$AlienPink.position = Vector2(268, 685)
+	$Ball.global_transform.origin = Vector2(790, 370)
 	gawang_abler = true
 	
 func _on_timer_timeout() -> void:
