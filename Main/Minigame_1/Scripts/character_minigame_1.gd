@@ -55,7 +55,7 @@ func shoot() -> void:
 	is_throwing = false
 	var bullet_instance = BULLET.instantiate()
 	bullet_instance.position = $marker.global_position
-	bullet_instance.launch(Vector2(0.9, -0.65) * 900)
+	bullet_instance.launch(Vector2(0.7, -0.9) * 900)
 	get_parent().add_child(bullet_instance)
 
 func _on_timer_timeout() -> void:
