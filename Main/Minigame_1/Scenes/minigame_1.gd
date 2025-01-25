@@ -8,10 +8,17 @@ var pink_health: int
 var ijo_health: int
 
 func _ready() -> void:
+	$countdown.hide()
 	pink_health = pink.health
 	ijo_health = ijo.health
 	darah_pink.init_health(pink_health)
 	darah_ijo.init_health(ijo_health)
 	
 func _process(delta: float) -> void:
-	pass
+	if $HtpMg1.visible and Input.is_action_just_pressed("d"):
+		$HtpMg1.hide()
+		await get_tree().create_timer(1).timeout
+		$AnimationPlayer.play("countdown")
+		await $AnimationPlayer.animation_finished
+		pink.start = true
+		ijo.start = true

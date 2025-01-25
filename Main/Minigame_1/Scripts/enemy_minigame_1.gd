@@ -3,6 +3,7 @@ extends CharacterBody2D
 var SPEED = 250.0
 var fly:bool = false
 const JUMP_VELOCITY = -400.0
+var start: bool = false
 @onready var right: RayCast2D = $Right
 @onready var left: RayCast2D = $Left
 const BULLET = preload("res://Main/Minigame_1/Scenes/bullet.tscn")
@@ -39,11 +40,11 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor() and !fly:
 		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("d") and can_shoot:
+	if Input.is_action_just_pressed("d") and can_shoot and start:
 		shoot()
 		timer.start()
 
-	if not is_throwing:
+	if not is_throwing and start:
 		velocity.x = SPEED
 
 		if SPEED > 0:
@@ -51,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		elif SPEED < 0:
 			$AnimatedSprite2D.play_backwards("run")
 
-	if Input.is_action_just_pressed("a"):
+	if Input.is_action_just_pressed("a") and start:
 		SPEED *= -1
 
 	#if right.is_colliding():
