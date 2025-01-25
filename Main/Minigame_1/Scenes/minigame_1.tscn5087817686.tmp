@@ -425,219 +425,123 @@ animations = [{
 size = Vector2(570.25, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4frt4"]
-size = Vector2(23, 71.8941)
+size = Vector2(20, 64.1286)
 
 [sub_resource type="Animation" id="Animation_103xj"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.843137, 1, 0.380392, 0.682353)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-225, -1035.96)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 0)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:theme_override_font_sizes/font_size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [100]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label:theme_override_colors/font_shadow_color")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Label:theme_override_colors/font_outline_color")
+tracks/3/path = NodePath("Label:theme_override_font_sizes/font_size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.203922, 0.0509804, 0.266667, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:theme_override_constants/shadow_offset_y")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label:theme_override_constants/outline_size")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [17]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Label:theme_override_constants/shadow_outline_size")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [21]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Label:visible")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"values": [100]
 }
 
 [sub_resource type="Animation" id="Animation_8wrh5"]
 resource_name = "win_scene"
-length = 3.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/enabled = false
+tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.751223, 0.92, 1.16667, 1.63333, 2.26667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0.797334, 0.765312, 0.486725, 0.144097), Color(0.976471, 0.937255, 0.596078, 0.176471), Color(0.976471, 0.937255, 0.596078, 0.176471), Color(0, 0, 0, 0), Color(0.976471, 0.937255, 0.596078, 1)]
+"values": [Color(0.848427, 0.941242, 1, 0.47451)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label:theme_override_font_sizes/font_size")
-tracks/1/interp = 1
+tracks/1/enabled = false
+tracks/1/path = NodePath("ColorRect:position")
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1.06667, 1.9),
+"times": PackedFloat32Array(0, 1, 1.5, 1.76667, 2, 2.15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-225, -1035.96), Vector2(-225, -123.965), Vector2(-225, -363.965), Vector2(-225, -123.965), Vector2(-225, -235.965), Vector2(-225, -123.965)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.96667, 3, 4.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 0.254902), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 4.06667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [200, 100]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
 "times": PackedFloat32Array(0.0999999),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": ["PLAYER 1 WINS", "PLAYER 2 WINS"],
 "method": &"type"
 }]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Label:theme_override_colors/font_shadow_color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.751223, 0.920854),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Label:theme_override_colors/font_outline_color")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.751223, 0.920854),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(0.203922, 0.0509804, 0.266667, 0), Color(0, 0, 0, 0), Color(0.203922, 0.0509804, 0.266667, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Label:theme_override_constants/shadow_offset_y")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [null, null, 8]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Label:theme_override_constants/outline_size")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [null, null, 17]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("Label:theme_override_constants/shadow_outline_size")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [null, null, 21]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("Label:visible")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.710834, 0.735067),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
@@ -653,9 +557,6 @@ script = ExtResource("1_p582i")
 texture_filter = 1
 tile_set = SubResource("TileSet_7at6v")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(575, 325)
-
 [node name="spaceship" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 721)
@@ -666,13 +567,15 @@ autoplay = "idle"
 frame_progress = 0.0739033
 
 [node name="spaceship2" type="AnimatedSprite2D" parent="."]
-texture_filter = 1
-position = Vector2(1137.63, 721)
+position = Vector2(1155, 721)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_1ugrs")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.256362
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 325)
 
 [node name="enemy_minigame1" parent="." instance=ExtResource("4_ouva8")]
 position = Vector2(3, 363)
@@ -691,19 +594,19 @@ position = Vector2(1186.13, 434)
 shape = SubResource("RectangleShape2D_51li6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(214.5, 390.064)
+position = Vector2(264, 390.064)
 shape = SubResource("RectangleShape2D_4frt4")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-207, 389.293)
+position = Vector2(-236, 389.293)
 shape = SubResource("RectangleShape2D_4frt4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(936, 386.053)
+position = Vector2(895, 393.138)
 shape = SubResource("RectangleShape2D_4frt4")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1364, 389.032)
+position = Vector2(1385, 379)
 shape = SubResource("RectangleShape2D_4frt4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -753,19 +656,15 @@ offset_bottom = -131.965
 color = Color(0.843137, 1, 0.380392, 0.682353)
 
 [node name="Label" type="Label" parent="."]
-visible = false
 offset_left = -192.0
 offset_top = 103.0
 offset_right = 1336.0
 offset_bottom = 574.0
 theme_override_colors/font_color = Color(0, 0, 0, 0)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
-theme_override_constants/shadow_offset_y = 8
-theme_override_constants/outline_size = 17
-theme_override_constants/shadow_outline_size = 21
 theme_override_fonts/font = ExtResource("12_103xj")
 theme_override_font_sizes/font_size = 100
+text = "PLAYER 1
+WIN"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_tup42")
