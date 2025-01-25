@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://w02pooi8q131" path="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_JumpEnd.png" id="3_0i06o"]
 [ext_resource type="Texture2D" uid="uid://jrp7pdehybo7" path="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_JumpStart.png" id="4_db6ob"]
 [ext_resource type="Texture2D" uid="uid://bkftdeeov3j8o" path="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_JumpWhile.png" id="5_1v7vy"]
-[ext_resource type="Texture2D" uid="uid://bk7rmv5g5sodx" path="res://Assets/Character/AlienIjo_Lose/AlienIjo_Shoes_Lose.png" id="6_db6ob"]
+[ext_resource type="Texture2D" uid="uid://by7n5ajngvpqt" path="res://Assets/Character/AlienIjo_Lose/AlienIjo_Shoes_Lose.png" id="6_db6ob"]
 [ext_resource type="Texture2D" uid="uid://pf7cgbg8xiky" path="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_Run.png" id="6_qfnci"]
 [ext_resource type="Texture2D" uid="uid://des6jk2j8yj2i" path="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_Win.png" id="8_1v7vy"]
 
