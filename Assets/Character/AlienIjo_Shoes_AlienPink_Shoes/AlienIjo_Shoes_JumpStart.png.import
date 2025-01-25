@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"
+uid="uid://jrp7pdehybo7"
+path="res://.godot/imported/AlienIjo_Shoes_JumpStart.png-c75db7df7b7f9abb805c74226cc97ec7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/SPACESHIP.png"
-dest_files=["res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"]
+source_file="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienIjo_Shoes_JumpStart.png"
+dest_files=["res://.godot/imported/AlienIjo_Shoes_JumpStart.png-c75db7df7b7f9abb805c74226cc97ec7.ctex"]
 
 [params]
 

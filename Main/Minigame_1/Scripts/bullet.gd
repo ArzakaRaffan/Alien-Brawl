@@ -9,7 +9,7 @@ var angular_velocity: float = 10.0 # Adjust this value for rotation speed
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if launched:
 		velocity += Vector2(0, 9.8) * mass * 3
 

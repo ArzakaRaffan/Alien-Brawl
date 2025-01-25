@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"
+uid="uid://bcvvnek4ol5oe"
+path="res://.godot/imported/football.png-285e57ff62eada8052b8ca7e436b8446.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/SPACESHIP.png"
-dest_files=["res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"]
+source_file="res://Assets/Temp/football.png"
+dest_files=["res://.godot/imported/football.png-285e57ff62eada8052b8ca7e436b8446.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"
+uid="uid://c0eqwg7oyeiym"
+path="res://.godot/imported/Health Bar.png-98dd726feae461ca49ab606b0b7fc77e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/SPACESHIP.png"
-dest_files=["res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"]
+source_file="res://Assets/UI/Health Bar.png"
+dest_files=["res://.godot/imported/Health Bar.png-98dd726feae461ca49ab606b0b7fc77e.ctex"]
 
 [params]
 

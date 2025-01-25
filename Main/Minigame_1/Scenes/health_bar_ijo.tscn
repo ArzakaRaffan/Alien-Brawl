@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsnuaull2plqb"]
+
+[ext_resource type="Script" uid="uid://ojexy84be117" path="res://Main/Minigame_1/Scenes/health_bar_ijo.gd" id="1_0fh1o"]
+[ext_resource type="Texture2D" uid="uid://c0eqwg7oyeiym" path="res://Assets/UI/Health Bar.png" id="1_3eyof"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wrh5"]
+bg_color = Color(0.87458, 0.769062, 0.743016, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_103xj"]
+bg_color = Color(0.709804, 0.858824, 0.454902, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3eyof"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0fh1o"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="DarahIjo" type="ProgressBar"]
+z_index = 1
+texture_filter = 1
+offset_left = -229.0
+offset_top = -14.0
+offset_right = 229.0
+offset_bottom = 6.0
+theme_override_styles/background = SubResource("StyleBoxFlat_8wrh5")
+theme_override_styles/fill = SubResource("StyleBoxFlat_103xj")
+value = 60.0
+fill_mode = 1
+show_percentage = false
+script = ExtResource("1_0fh1o")
+
+[node name="DamageBar" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_3eyof")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0fh1o")
+value = 80.0
+fill_mode = 1
+show_percentage = false
+
+[node name="HealthBarIjo" type="Sprite2D" parent="."]
+z_index = -2
+texture_filter = 1
+position = Vector2(230, 14)
+texture = ExtResource("1_3eyof")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

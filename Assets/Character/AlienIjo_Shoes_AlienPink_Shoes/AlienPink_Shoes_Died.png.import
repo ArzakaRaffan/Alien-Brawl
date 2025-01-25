@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"
+uid="uid://cik1y0kqckxrb"
+path="res://.godot/imported/AlienPink_Shoes_Died.png-a38fa66b50d538344f1a4ac2ced1e5c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/SPACESHIP.png"
-dest_files=["res://.godot/imported/SPACESHIP.png-9e1593824c8edc1404843097b99091b6.ctex"]
+source_file="res://Assets/Character/AlienIjo_Shoes_AlienPink_Shoes/AlienPink_Shoes_Died.png"
+dest_files=["res://.godot/imported/AlienPink_Shoes_Died.png-a38fa66b50d538344f1a4ac2ced1e5c9.ctex"]
 
 [params]
 

@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7rwhhsfh6a41"]
+
+[ext_resource type="Script" uid="uid://cipclauox7jk4" path="res://Main/Minigame_1/Scenes/health_bar_pink.gd" id="1_142xa"]
+[ext_resource type="Texture2D" uid="uid://c0eqwg7oyeiym" path="res://Assets/UI/Health Bar.png" id="1_oktyk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tup42"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x30k6"]
+bg_color = Color(0.878431, 0.576471, 0.788235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oktyk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_142xa"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="DarahPink" type="ProgressBar"]
+z_index = 1
+texture_filter = 1
+offset_left = -229.0
+offset_top = -14.0
+offset_right = 229.0
+offset_bottom = 6.0
+theme_override_styles/background = SubResource("StyleBoxFlat_tup42")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x30k6")
+value = 60.0
+show_percentage = false
+script = ExtResource("1_142xa")
+
+[node name="DamageBar" type="ProgressBar" parent="."]
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_oktyk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_142xa")
+value = 80.0
+show_percentage = false
+
+[node name="HealthBarPink" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(229, 14)
+texture = ExtResource("1_oktyk")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
