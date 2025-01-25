@@ -887,7 +887,6 @@ debug_color = Color(0.743807, 0.212103, 1, 0.42)
 [node name="LuckyBlocks" type="Node" parent="."]
 
 [node name="LuckyBlock" type="StaticBody2D" parent="LuckyBlocks"]
-visible = false
 modulate = Color(1, 1, 0, 1)
 self_modulate = Color(1, 1, 0, 1)
 position = Vector2(500, 499)
