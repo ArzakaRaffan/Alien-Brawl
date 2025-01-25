@@ -1,15 +1,25 @@
 extends CharacterBody2D
 
-var SPEED = 300.0
+var start = false
+var SPEED = -300.0
 var fly:bool = false
 const JUMP_VELOCITY = -400.0
 @onready var right: RayCast2D = $Right
 @onready var left: RayCast2D = $Left
 @onready var anim: AnimatedSprite2D = $anim
+var is_win: bool = false
+var is_lose: bool = false
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	if is_win:
+		velocity.x = 0
+		anim.play("win")
+	
+	if is_lose:
+		velocity.x = 0
+		anim.play("lose")
+
 	if not is_on_floor() and !fly:
 		velocity += get_gravity() * delta
 		if velocity.y >0 :
@@ -24,32 +34,36 @@ func _physics_process(delta: float) -> void:
 			queue_free()
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_right") and is_on_floor():
+	if Input.is_action_just_pressed("ui_right") and is_on_floor() and not is_win and not is_lose and start:
 		anim.play("jumpwhile")
 		velocity.y = JUMP_VELOCITY*1.1
-	elif is_on_floor():
+	elif is_on_floor() and not is_win and not is_lose and start:
 		anim.play("run")
-	velocity.x = SPEED
 	
-	if Input.is_action_just_pressed("ui_left"):
+	if not is_win and not is_lose and start:
+		velocity.x = SPEED
+	
+	if Input.is_action_just_pressed("ui_left") and not is_win and not is_lose and start:
 		SPEED*=-1
 		anim.flip_h = !anim.flip_h
 		
-	if right.is_colliding():
-		SPEED=-300
-		anim.flip_h = true
+	if right.is_colliding() and not is_win and not is_lose and start:
 		var collider = right.get_collider()
 		if collider is RigidBody2D:
 			var push_force = Vector2(40, 0)
 			collider.apply_central_impulse(push_force)
+		else:
+			SPEED=-300
+			anim.flip_h = true
 	
-	if left.is_colliding():
-		SPEED=300
-		anim.flip_h = false
+	if left.is_colliding() and not is_win and not is_lose and start:
 		var collider = left.get_collider()
 		if collider is RigidBody2D:
 			var push_force = Vector2(-40, 0)
 			collider.apply_central_impulse(push_force)
+		else:
+			SPEED=300
+			anim.flip_h = false
 
 	move_and_slide()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cabafcw20ahqy"]
+[gd_scene load_steps=28 format=3 uid="uid://cabafcw20ahqy"]
 
 [ext_resource type="Texture2D" uid="uid://dpjuoaqfwdtk7" path="res://Assets/Temp/RunnerTileSet.png" id="1_n6olu"]
 [ext_resource type="Script" uid="uid://cdvmlkl0ebbf0" path="res://Main/Minigame_1/Scenes/minigame_1.gd" id="1_p582i"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bsnuaull2plqb" path="res://Main/Minigame_1/Scenes/health_bar_ijo.tscn" id="10_103xj"]
 [ext_resource type="FontFile" uid="uid://0u7tsat4cl15" path="res://Assets/Fonts/ca.ttf" id="12_103xj"]
 [ext_resource type="Script" uid="uid://cptxa1qx0boqb" path="res://Main/Minigame_1/Scenes/label.gd" id="13_tup42"]
+[ext_resource type="Texture2D" uid="uid://b8301apjefkpf" path="res://Assets/UI/htp mg1.png" id="14_x30k6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibahl"]
 texture = ExtResource("1_n6olu")
@@ -525,6 +526,43 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("countdown:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["3
+"]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("countdown:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("countdown:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_8wrh5"]
 resource_name = "win_scene"
@@ -634,15 +672,56 @@ tracks/8/path = NodePath("Label:visible")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(-0.0666667, 0.710834, 0.735067),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false, false, true]
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_x30k6"]
+resource_name = "countdown"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("countdown:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1", "START!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("countdown:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("countdown:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
 _data = {
 &"RESET": SubResource("Animation_103xj"),
+&"countdown": SubResource("Animation_x30k6"),
 &"win_scene": SubResource("Animation_8wrh5")
 }
 
@@ -769,3 +848,23 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("13_tup42")
+
+[node name="HtpMg1" type="Sprite2D" parent="."]
+position = Vector2(596, 249)
+texture = ExtResource("14_x30k6")
+
+[node name="countdown" type="Label" parent="."]
+offset_left = 271.0
+offset_top = 184.0
+offset_right = 846.0
+offset_bottom = 367.0
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 71
+theme_override_constants/shadow_outline_size = 0
+theme_override_fonts/font = ExtResource("12_103xj")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+horizontal_alignment = 1
+vertical_alignment = 1
