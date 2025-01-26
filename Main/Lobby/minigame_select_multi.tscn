@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://cj80n0x6uuprn"]
+[gd_scene load_steps=34 format=4 uid="uid://cj80n0x6uuprn"]
 
 [ext_resource type="Script" uid="uid://e3n0emb5qpa6" path="res://Main/Lobby/minigame_select_multi.gd" id="1_ners6"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_kok20"]
@@ -19,6 +19,7 @@
 [ext_resource type="FontFile" uid="uid://hql7l2t1vplo" path="res://Assets/Fonts/victor-pixel.ttf" id="16_1nqey"]
 [ext_resource type="Texture2D" uid="uid://b8o2bi3l4ll8g" path="res://Assets/Lobby/Ufo 2.png" id="17_1nqey"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="18_jdaqi"]
+[ext_resource type="AudioStream" uid="uid://bdlxti5xwmnay" path="res://Assets/Music/LobbyMusic.mp3" id="20_33nrf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yme1s"]
 texture = ExtResource("7_yme1s")
@@ -669,6 +670,12 @@ polygon = PackedVector2Array(337, 228, 227, 881, 608, 881, 506, 228)
 
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("18_jdaqi")]
 visible = false
+
+[node name="LobbyMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("20_33nrf")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]
