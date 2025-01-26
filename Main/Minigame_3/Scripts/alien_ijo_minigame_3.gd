@@ -10,12 +10,14 @@ const JUMP_VELOCITY = -400.0
 var is_win: bool = false
 var is_lose: bool = false
 @onready var kicks: AudioStreamPlayer = $"../kicks"
+@onready var wohoo: AudioStreamPlayer = $"../wohoo"
 
 
 func _physics_process(delta: float) -> void:
 	if is_win:
 		velocity.x = 0
 		anim.play("win")
+		wohoo.play()
 	
 	if is_lose:
 		velocity.x = 0

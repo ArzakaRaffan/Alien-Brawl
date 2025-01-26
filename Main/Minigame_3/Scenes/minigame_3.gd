@@ -31,10 +31,13 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(1.5).timeout
 		alien_ijo.is_win = true
 		alien_pink.is_lose = true
+		$wohoo.play()
 		await get_tree().create_timer(1.5).timeout
+		$wohoo.play()
 		$Label.type("PLAYER 1\nWINS")
 		$AnimationPlayer2.play("win_scene")
 		await $AnimationPlayer2.animation_finished
+		$wohoo.play()
 		await get_tree().create_timer(1).timeout
 		$CanvasLayer/Transition.get_child(0).play("fade_out")
 		await get_tree().create_timer(1.5).timeout
@@ -46,10 +49,13 @@ func _process(delta: float) -> void:
 		await get_tree().create_timer(1.5).timeout
 		alien_pink.is_win = true
 		alien_ijo.is_lose = true
+		$wohoo.play()
 		await get_tree().create_timer(1.5).timeout
+		$wohoo.play()
 		$Label.type("PLAYER 2\nWINS")
 		$AnimationPlayer2.play("win_scene")
 		await $AnimationPlayer2.animation_finished
+		$wohoo.play()
 		await get_tree().create_timer(1).timeout
 		$CanvasLayer/Transition.get_child(0).play("fade_out")
 		await get_tree().create_timer(1.5).timeout

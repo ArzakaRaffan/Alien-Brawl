@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cabafcw20ahqy"]
+[gd_scene load_steps=38 format=3 uid="uid://cabafcw20ahqy"]
 
 [ext_resource type="Texture2D" uid="uid://dpjuoaqfwdtk7" path="res://Assets/Temp/RunnerTileSet.png" id="1_n6olu"]
 [ext_resource type="Script" uid="uid://cdvmlkl0ebbf0" path="res://Main/Minigame_1/Scenes/minigame_1.gd" id="1_p582i"]
@@ -20,7 +20,9 @@
 [ext_resource type="AudioStream" uid="uid://cvwevjmvnp1oe" path="res://Assets/Music/game-countdown-62-199828.mp3" id="18_xxmvn"]
 [ext_resource type="AudioStream" uid="uid://cv7puitws17hy" path="res://Assets/Music/win-brass-fanfare-reverberated-146263.mp3" id="19_18q56"]
 [ext_resource type="AudioStream" uid="uid://coidpvahiywx0" path="res://Assets/Music/minigame1_backsound.mp3" id="20_4xh5s"]
+[ext_resource type="AudioStream" uid="uid://wovcpqk2phld" path="res://Assets/Music/gothit.mp3" id="21_75vmw"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="21_rn8sd"]
+[ext_resource type="AudioStream" uid="uid://cmtnwejh4m5rk" path="res://Assets/Music/win_minigame1.mp3" id="22_uvs2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibahl"]
 texture = ExtResource("1_n6olu")
@@ -900,7 +902,7 @@ motion_mirroring = Vector2(0, 3465)
 
 [node name="VerticalBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_filter = 1
-position = Vector2(606, 1670)
+position = Vector2(576, 1670)
 texture = ExtResource("6_lefcr")
 
 [node name="planet" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -1016,6 +1018,13 @@ stream = ExtResource("20_4xh5s")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
+
+[node name="gothit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_75vmw")
+volume_db = -5.0
+
+[node name="wehee" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_uvs2j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
