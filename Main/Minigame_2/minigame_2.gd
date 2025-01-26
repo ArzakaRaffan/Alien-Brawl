@@ -18,6 +18,11 @@ var c_time = null
 var d_time = null
 var max_milliseconds = 100
 var def_cam_pos:Vector2
+@onready var transition: ColorRect = $CanvasLayer/Transition
+@onready var jump_1: AudioStreamPlayer = $Player1/Jump1
+@onready var jump_2: AudioStreamPlayer = $Player2/Jump2
+@onready var hit_hurt_1: AudioStreamPlayer = $Player1/HitHurt1
+@onready var hit_hurt_2: AudioStreamPlayer = $Player2/HitHurt2
 @onready var player_1: AnimatedSprite2D = $Player1
 @onready var shadow_1: AnimatedSprite2D = $Player1/Shadow1
 @onready var player_2: AnimatedSprite2D = $Player2
@@ -47,6 +52,8 @@ var button_to_press:Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	transition.show()
+	transition.get_child(0).play("fade_in")
 	p1cant_press=true
 	p2cant_press=true
 	def_cam_pos = camera_2d.position
@@ -173,6 +180,7 @@ func add_stone() :
 	swipe_camera()
 
 func go_down():
+	jump_2.play()
 	if flag_win:return
 	player_2.play("jump_end")
 	shadow_2.play("jump_end")
@@ -223,6 +231,7 @@ func go_down():
 
 func go_up():
 	if flag_win:return
+	jump_1.play()
 	player_1.play("jump_end")
 	shadow_1.play("jump_end")
 	#if p1-1 == p2:
@@ -353,6 +362,7 @@ func _input(event):
 		d_time = null
 	
 func p1_failed():
+	hit_hurt_1.play()
 	p1cant_press = true
 	player_1.play("failed")
 	shadow_1.play("failed")
@@ -361,6 +371,7 @@ func p1_failed():
 	p1cant_press = false
 	
 func p2_failed():
+	hit_hurt_2.play()
 	p2cant_press = true
 	player_2.play("failed")
 	shadow_2.play("failed")
@@ -377,6 +388,9 @@ func _on_player_2_animation_finished() -> void:
 	shadow_2.play("default")
 
 func p1_win():
+	$"Pixel-fight-8-bit-arcade-music-background-music-for-video-208775".stop()
+	$"Win-brass-fanfare-reverberated-146263".play()
+	$"Cute-character-wee-1-188162".play()
 	label.type("PLAYER 1\nWINS")
 	label.position = camera_2d.position-Vector2(550,225)
 	animation_player.play("win_scene")
@@ -399,6 +413,9 @@ func p1_win():
 		await get_tree().create_timer(1.05).timeout
 
 func p2_win():
+	$"Pixel-fight-8-bit-arcade-music-background-music-for-video-208775".stop()
+	$"Win-brass-fanfare-reverberated-146263".play()
+	$"Cute-character-wee-2-188161".play()
 	label.type("PLAYER 2\nWINS")
 	label.position = camera_2d.position-Vector2(550,225)
 	animation_player.play("win_scene")
@@ -420,3 +437,9 @@ func p2_win():
 		node.play_backwards("default")
 		another_node.play("new_animation")
 		await get_tree().create_timer(1.05).timeout
+
+func quit_lobby() :
+	transition.show()
+	transition.get_child(0).play("fade_out")
+	await transition.get_child(0).animation_finished
+	get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")

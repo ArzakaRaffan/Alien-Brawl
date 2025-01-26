@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6vjoweajdqtl"
+path="res://.godot/imported/cute-character-wee-2-188161.mp3-3f5219c77ad318797ac9921f446d7a55.mp3str"
+
+[deps]
+
+source_file="res://Assets/Minigame 2/cute-character-wee-2-188161.mp3"
+dest_files=["res://.godot/imported/cute-character-wee-2-188161.mp3-3f5219c77ad318797ac9921f446d7a55.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
