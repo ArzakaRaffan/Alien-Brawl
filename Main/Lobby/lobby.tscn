@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dwohe8lq6tv7h"]
+[gd_scene load_steps=31 format=4 uid="uid://dwohe8lq6tv7h"]
 
 [ext_resource type="Script" uid="uid://cl2c7jaabxv51" path="res://Main/Lobby/lobby.gd" id="1_7scs4"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_i4om5"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ddud1cb1l8u5" path="res://Assets/Lobby/Planet.png" id="5_u1cge"]
 [ext_resource type="Texture2D" uid="uid://c14usg5wylcbh" path="res://Assets/Lobby/ALIENBRAWL.png" id="7_o1lxr"]
 [ext_resource type="FontFile" uid="uid://hql7l2t1vplo" path="res://Assets/Fonts/victor-pixel.ttf" id="8_i4om5"]
+[ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="13_6sal4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1cge"]
 texture = ExtResource("3_d5kpu")
@@ -304,77 +305,60 @@ _data = {
 radius = 95.5
 height = 197.0
 
-[sub_resource type="Animation" id="Animation_6sal4"]
-resource_name = "Hovering"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.333333, 1.33333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1119, 543), Vector2(1119, 511)]
-}
-
 [sub_resource type="Animation" id="Animation_w4km5"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("Polygon2D2:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1119, 543)]
+"values": [Vector2(709.676, 284.776)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Polygon2D2:scale")
+tracks/1/path = NodePath("Polygon2D2:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(0.972, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Polygon2D2:position")
+tracks/2/path = NodePath("Polygon2D2:color")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(695, 253)]
+"values": [Color(0.976471, 0.937255, 0.596078, 0.365389)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../Polygon2D2:color")
+tracks/3/path = NodePath("Multi:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0.976471, 0.937255, 0.596078, 0.376471)]
+"values": [Vector2(1119, 534.704)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:rotation")
+tracks/4/path = NodePath("Multi:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -384,61 +368,61 @@ tracks/4/keys = {
 "values": [0.0]
 }
 
-[sub_resource type="Animation" id="Animation_jkc3a"]
+[sub_resource type="Animation" id="Animation_6sal4"]
 resource_name = "go"
 length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../Polygon2D2:scale")
+tracks/0/path = NodePath("Polygon2D2:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1e-05, 1)]
+"values": [Vector2(709.676, 284.776), Vector2(1115.68, 284.776)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../Polygon2D2:position")
+tracks/1/path = NodePath("Polygon2D2:scale")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(695, 253), Vector2(1114, 253)]
+"values": [Vector2(0.972, 1), Vector2(1e-05, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../Polygon2D2:color")
+tracks/2/path = NodePath("Polygon2D2:color")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.75, 1.50039),
+"times": PackedFloat32Array(0.75, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0.976471, 0.937255, 0.596078, 0.376471), Color(0.976471, 0.937255, 0.596078, 0)]
+"values": [Color(0.976471, 0.937255, 0.596078, 0.365389), Color(0.98, 0.94178, 0.5978, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath(".:position")
+tracks/3/path = NodePath("Multi:position")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.75, 1.49689, 2.5),
+"times": PackedFloat32Array(0.75, 1.5, 2.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1119, 543), Vector2(1119, 544), Vector2(1863, 544)]
+"values": [Vector2(1119, 543), Vector2(1119, 544), Vector2(1859, 544)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:rotation")
+tracks/4/path = NodePath("Multi:rotation")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -448,11 +432,28 @@ tracks/4/keys = {
 "values": [0.0, 0.20944]
 }
 
+[sub_resource type="Animation" id="Animation_jkc3a"]
+resource_name = "hovering"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Multi:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.25, 1.26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1119, 517), Vector2(1119, 549)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k7066"]
 _data = {
-&"Hovering": SubResource("Animation_6sal4"),
 &"RESET": SubResource("Animation_w4km5"),
-&"go": SubResource("Animation_jkc3a")
+&"go": SubResource("Animation_6sal4"),
+&"hovering": SubResource("Animation_jkc3a")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d5kpu"]
@@ -505,6 +506,12 @@ _data = {
 [node name="Lobby" type="Node2D"]
 script = ExtResource("1_7scs4")
 
+[node name="Marker Single" type="Marker2D" parent="."]
+position = Vector2(485, 410)
+
+[node name="Marker Multi" type="Marker2D" parent="."]
+position = Vector2(1120, 410)
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="Parallax2D" parent="ParallaxBackground"]
@@ -547,12 +554,6 @@ autoscroll = Vector2(3, 0)
 texture_filter = 1
 position = Vector2(819, 503)
 texture = ExtResource("5_u1cge")
-
-[node name="Marker Single" type="Marker2D" parent="."]
-position = Vector2(485, 410)
-
-[node name="Marker Multi" type="Marker2D" parent="."]
-position = Vector2(1120, 410)
 
 [node name="Tile" type="Node" parent="."]
 
@@ -602,15 +603,14 @@ polygon = PackedVector2Array(337, 228, 274, 592, 560, 592, 506, 228)
 [node name="Multi_Ufo" type="Node2D" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Multi_Ufo"]
-root_node = NodePath("../Multi")
 libraries = {
 &"": SubResource("AnimationLibrary_k7066")
 }
-autoplay = "Hovering"
+autoplay = "hovering"
 
 [node name="Multi" type="Sprite2D" parent="Multi_Ufo"]
 texture_filter = 1
-position = Vector2(1119, 543)
+position = Vector2(1119, 534.704)
 texture = ExtResource("5_6ygub")
 
 [node name="AreaMult" type="Area2D" parent="Multi_Ufo"]
@@ -622,8 +622,9 @@ shape = SubResource("CapsuleShape2D_6ygub")
 
 [node name="Polygon2D2" type="Polygon2D" parent="Multi_Ufo"]
 z_index = -1
-position = Vector2(695, 253)
-color = Color(0.976471, 0.937255, 0.596078, 0.376471)
+position = Vector2(709.676, 284.776)
+scale = Vector2(0.972, 1)
+color = Color(0.976471, 0.937255, 0.596078, 0.365389)
 polygon = PackedVector2Array(337, 228, 274, 592, 560, 592, 506, 228)
 
 [node name="Border" type="StaticBody2D" parent="."]
@@ -739,6 +740,11 @@ theme_override_font_sizes/font_size = 48
 text = "2 PLAYER"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource("13_6sal4")]
+visible = false
 
 [connection signal="body_entered" from="Single_Ufo/AreaSing" to="." method="_on_area_sing_body_entered"]
 [connection signal="body_entered" from="Multi_Ufo/AreaMult" to="." method="_on_area_mult_body_entered"]

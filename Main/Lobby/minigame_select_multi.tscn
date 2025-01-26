@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cj80n0x6uuprn"]
+[gd_scene load_steps=33 format=4 uid="uid://cj80n0x6uuprn"]
 
 [ext_resource type="Script" uid="uid://e3n0emb5qpa6" path="res://Main/Lobby/minigame_select_multi.gd" id="1_ners6"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_kok20"]
@@ -14,10 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://ca2jyhw72vxt8" path="res://Assets/Lobby/Frame 16 (1).png" id="12_dmmom"]
 [ext_resource type="Texture2D" uid="uid://bte02glnylhgo" path="res://Assets/Lobby/Frame 16.png" id="13_dmmom"]
 [ext_resource type="Texture2D" uid="uid://bl62egecko4lw" path="res://Assets/Lobby/Frame 20.png" id="14_fqek8"]
+[ext_resource type="Texture2D" uid="uid://djsthuyc7m6nh" path="res://Assets/Lobby/Polygon 2.png" id="15_1r6iu"]
 [ext_resource type="Texture2D" uid="uid://dvg1q6fqchw6c" path="res://Assets/Lobby/Polygon 1.png" id="15_yme1s"]
 [ext_resource type="FontFile" uid="uid://hql7l2t1vplo" path="res://Assets/Fonts/victor-pixel.ttf" id="16_1nqey"]
+[ext_resource type="Texture2D" uid="uid://b8o2bi3l4ll8g" path="res://Assets/Lobby/Ufo 2.png" id="17_1nqey"]
+[ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="18_jdaqi"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1nqey"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yme1s"]
 texture = ExtResource("7_yme1s")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -151,7 +154,7 @@ texture = ExtResource("7_yme1s")
 [sub_resource type="TileSet" id="TileSet_jdaqi"]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
-sources/0 = SubResource("TileSetAtlasSource_1nqey")
+sources/0 = SubResource("TileSetAtlasSource_yme1s")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cows"]
 size = Vector2(19, 2.5)
@@ -171,11 +174,28 @@ size = Vector2(320, 349)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eja3a"]
 size = Vector2(320.5, 349)
 
-[sub_resource type="Animation" id="Animation_7g8jv"]
-resource_name = "bounce"
+[sub_resource type="Animation" id="Animation_6sal4"]
+resource_name = "Hovering"
+length = 2.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.333333, 1.33333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1119, 543), Vector2(1119, 511)]
+}
+
+[sub_resource type="Animation" id="Animation_w4km5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -183,13 +203,131 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(500, 499)]
+"values": [Vector2(1119, 543)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("../Polygon2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("../Polygon2D2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(695, 253)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("../Polygon2D2:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.976471, 0.937255, 0.596078, 0.376471)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/path = NodePath(".:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pm4vc"]
-_data = {
-&"bounce": SubResource("Animation_7g8jv")
+[sub_resource type="Animation" id="Animation_jkc3a"]
+resource_name = "go"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Polygon2D2:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.9, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1), Vector2(1, 1)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Polygon2D2:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1115, 277), Vector2(698, 285)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Polygon2D2:color")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.933333, 2.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.976471, 0.937255, 0.596078, 0), Color(0.976471, 0.937255, 0.596078, 0.376471)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(747, 543), Vector2(1119, 543)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.20944, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k7066"]
+_data = {
+&"Hovering": SubResource("Animation_6sal4"),
+&"RESET": SubResource("Animation_w4km5"),
+&"go": SubResource("Animation_jkc3a")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jdaqi"]
+radius = 95.5
+height = 197.0
 
 [node name="Lobby" type="Node2D"]
 script = ExtResource("1_ners6")
@@ -252,7 +390,8 @@ tile_map_data = PackedByteArray("AAAAADMAAAAAAAAAAAAAADQAAAAAAAEAAAAAADUAAAAAAAI
 tile_set = SubResource("TileSet_jdaqi")
 
 [node name="AlienIjo" parent="." instance=ExtResource("3_hov7q")]
-position = Vector2(86, 741)
+visible = false
+position = Vector2(44, 185)
 
 [node name="AreaIjo" type="Area2D" parent="AlienIjo"]
 
@@ -262,7 +401,7 @@ shape = SubResource("RectangleShape2D_4cows")
 debug_color = Color(0.2687, 0.632972, 5.77569e-07, 0.42)
 
 [node name="AlienPink" parent="." instance=ExtResource("6_7g8jv")]
-position = Vector2(215, 739)
+position = Vector2(1543, 743)
 
 [node name="AreaPink" type="Area2D" parent="AlienPink"]
 
@@ -289,9 +428,10 @@ shape = SubResource("RectangleShape2D_33nrf")
 [node name="LuckyBlocks" type="Node" parent="."]
 
 [node name="LuckyBlock" type="StaticBody2D" parent="LuckyBlocks"]
-position = Vector2(444, 467)
+position = Vector2(420, 435)
 script = ExtResource("5_7g8jv")
 gravity = 1000.0
+path = "res://Main/Minigame_1/Scenes/minigame_1.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LuckyBlocks/LuckyBlock"]
 texture_filter = 1
@@ -312,11 +452,6 @@ shape = SubResource("RectangleShape2D_c0xyo")
 position = Vector2(-1.25, 4.5)
 shape = SubResource("RectangleShape2D_eja3a")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LuckyBlocks/LuckyBlock"]
-libraries = {
-&"": SubResource("AnimationLibrary_pm4vc")
-}
-
 [node name="Polygon1" type="Sprite2D" parent="LuckyBlocks/LuckyBlock"]
 visible = false
 texture_filter = 1
@@ -331,6 +466,8 @@ offset_top = -268.0
 offset_right = -72.0
 offset_bottom = -235.0
 theme_override_colors/font_color = Color(0.709804, 0.858824, 0.454902, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p1"
@@ -339,10 +476,9 @@ vertical_alignment = 1
 
 [node name="Polygon2" type="Sprite2D" parent="LuckyBlocks/LuckyBlock"]
 visible = false
-modulate = Color(0.981632, 0.512651, 1, 1)
 texture_filter = 1
 position = Vector2(92, -207)
-texture = ExtResource("15_yme1s")
+texture = ExtResource("15_1r6iu")
 
 [node name="Label2" type="Label" parent="LuckyBlocks/LuckyBlock"]
 visible = false
@@ -351,15 +487,18 @@ offset_left = 71.0
 offset_top = -267.0
 offset_right = 114.0
 offset_bottom = -234.0
-theme_override_colors/font_color = Color(0.698039, 0.439216, 0.454902, 1)
+theme_override_colors/font_color = Color(0.878431, 0.576471, 0.788235, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p2"
 
 [node name="LuckyBlock2" type="StaticBody2D" parent="LuckyBlocks"]
-position = Vector2(814, 467)
+position = Vector2(801, 435)
 script = ExtResource("5_7g8jv")
 gravity = 1000.0
+path = "res://Main/Minigame_2/minigame_2.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LuckyBlocks/LuckyBlock2"]
 texture_filter = 1
@@ -382,11 +521,6 @@ shape = SubResource("RectangleShape2D_c0xyo")
 position = Vector2(-1.25, 4.5)
 shape = SubResource("RectangleShape2D_eja3a")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LuckyBlocks/LuckyBlock2"]
-libraries = {
-&"": SubResource("AnimationLibrary_pm4vc")
-}
-
 [node name="Polygon1" type="Sprite2D" parent="LuckyBlocks/LuckyBlock2"]
 visible = false
 texture_filter = 1
@@ -401,6 +535,8 @@ offset_top = -268.0
 offset_right = -72.0
 offset_bottom = -235.0
 theme_override_colors/font_color = Color(0.709804, 0.858824, 0.454902, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p1"
@@ -409,10 +545,9 @@ vertical_alignment = 1
 
 [node name="Polygon2" type="Sprite2D" parent="LuckyBlocks/LuckyBlock2"]
 visible = false
-modulate = Color(0.981632, 0.512651, 1, 1)
 texture_filter = 1
 position = Vector2(92, -207)
-texture = ExtResource("15_yme1s")
+texture = ExtResource("15_1r6iu")
 
 [node name="Label2" type="Label" parent="LuckyBlocks/LuckyBlock2"]
 visible = false
@@ -421,15 +556,18 @@ offset_left = 71.0
 offset_top = -267.0
 offset_right = 114.0
 offset_bottom = -234.0
-theme_override_colors/font_color = Color(0.698039, 0.439216, 0.454902, 1)
+theme_override_colors/font_color = Color(0.878431, 0.576471, 0.788235, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p2"
 
 [node name="LuckyBlock3" type="StaticBody2D" parent="LuckyBlocks"]
-position = Vector2(1182, 467)
+position = Vector2(1180, 435)
 script = ExtResource("5_7g8jv")
 gravity = 1000.0
+path = "res://Main/Minigame_3/Scenes/minigame_3.tscn"
 
 [node name="Sprite2D" type="Sprite2D" parent="LuckyBlocks/LuckyBlock3"]
 texture_filter = 1
@@ -465,6 +603,8 @@ offset_top = -268.0
 offset_right = -72.0
 offset_bottom = -235.0
 theme_override_colors/font_color = Color(0.709804, 0.858824, 0.454902, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p1"
@@ -473,10 +613,9 @@ vertical_alignment = 1
 
 [node name="Polygon2" type="Sprite2D" parent="LuckyBlocks/LuckyBlock3"]
 visible = false
-modulate = Color(0.981632, 0.512651, 1, 1)
 texture_filter = 1
 position = Vector2(92, -207)
-texture = ExtResource("15_yme1s")
+texture = ExtResource("15_1r6iu")
 
 [node name="Label2" type="Label" parent="LuckyBlocks/LuckyBlock3"]
 visible = false
@@ -485,16 +624,53 @@ offset_left = 71.0
 offset_top = -267.0
 offset_right = 114.0
 offset_bottom = -234.0
-theme_override_colors/font_color = Color(0.698039, 0.439216, 0.454902, 1)
+theme_override_colors/font_color = Color(0.878431, 0.576471, 0.788235, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = ExtResource("16_1nqey")
 theme_override_font_sizes/font_size = 32
 text = "p2"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LuckyBlocks/LuckyBlock3"]
+[node name="Marker Single" type="Marker2D" parent="."]
+position = Vector2(465, 36)
+
+[node name="Marker Multi" type="Marker2D" parent="."]
+position = Vector2(-2, 96)
+
+[node name="Multi_Ufo" type="Node2D" parent="."]
+position = Vector2(-1119, -320)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Multi_Ufo"]
+root_node = NodePath("../Multi")
 libraries = {
-&"": SubResource("AnimationLibrary_pm4vc")
+&"": SubResource("AnimationLibrary_k7066")
 }
+autoplay = "go"
+
+[node name="Multi" type="Sprite2D" parent="Multi_Ufo"]
+texture_filter = 1
+position = Vector2(1119, 543)
+texture = ExtResource("17_1nqey")
+
+[node name="AreaMult" type="Area2D" parent="Multi_Ufo"]
+position = Vector2(1307, 746)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Multi_Ufo/AreaMult"]
+position = Vector2(-360.5, 179.75)
+shape = SubResource("CapsuleShape2D_jdaqi")
+
+[node name="Polygon2D2" type="Polygon2D" parent="Multi_Ufo"]
+z_index = -1
+position = Vector2(698, 285)
+color = Color(0.976471, 0.937255, 0.596078, 0.376471)
+polygon = PackedVector2Array(337, 228, 227, 881, 608, 881, 506, 228)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource("18_jdaqi")]
+visible = false
 
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock3/Area2D" to="LuckyBlocks/LuckyBlock3" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Multi_Ufo/AreaMult" to="." method="_on_area_mult_body_entered"]
