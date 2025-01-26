@@ -47,6 +47,8 @@ var button_to_press:Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	p1cant_press=true
+	p2cant_press=true
 	def_cam_pos = camera_2d.position
 	for i in range(6) :
 		button_to_press.append(list_button.pick_random())
@@ -55,6 +57,7 @@ func _ready() -> void:
 	list_up.append_array(button_to_press)
 	button_up = list_up.pop_front()
 	for button in button_to_press:
+		await get_tree().create_timer(0.5).timeout
 		if button == "<":
 			var stone_up = stone_a.duplicate()
 			stone_up.modulate = Color(1,1,1)
@@ -101,7 +104,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if $HtpMg1.visible and Input.is_action_just_pressed("d"):
+		$HtpMg1.hide()
+		await get_tree().create_timer(1).timeout
+		$AnimationPlayer.play("countdown")
+		await $AnimationPlayer.animation_finished
+		p1cant_press=false
+		p2cant_press=false
 	
 func swipe_camera() :
 	def_cam_pos+= Vector2(240,0)
@@ -369,7 +378,7 @@ func _on_player_2_animation_finished() -> void:
 
 func p1_win():
 	label.type("PLAYER 1\nWINS")
-	label.position = camera_2d.position-Vector2(550,450)
+	label.position = camera_2d.position-Vector2(550,225)
 	animation_player.play("win_scene")
 	p1cant_press = true
 	p2cant_press = true
@@ -391,7 +400,7 @@ func p1_win():
 
 func p2_win():
 	label.type("PLAYER 2\nWINS")
-	label.position = camera_2d.position-Vector2(550,450)
+	label.position = camera_2d.position-Vector2(550,225)
 	animation_player.play("win_scene")
 	p1cant_press = true
 	p2cant_press = true

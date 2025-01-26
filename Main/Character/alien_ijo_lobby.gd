@@ -4,6 +4,7 @@ class_name MC
 var SPEED = 300.0
 var fly:bool = false
 const JUMP_VELOCITY = -400.0
+var bool_start:bool =false
 @onready var right: RayCast2D = $Right
 @onready var left: RayCast2D = $Left
 @onready var right2: RayCast2D = $Right2
@@ -13,6 +14,9 @@ const JUMP_VELOCITY = -400.0
 @onready var marker_multi: Marker2D = $"../Marker Multi"
 
 func _physics_process(delta: float) -> void:
+	if !bool_start :
+		return
+		
 	# Add the gravity.
 	if not is_on_floor() and !fly:
 		velocity += get_gravity() * delta
@@ -49,6 +53,8 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func start():
+	bool_start = true
 	
 func stop(type:String) :
 	if type == "multi":
