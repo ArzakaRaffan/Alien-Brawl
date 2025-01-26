@@ -10,15 +10,15 @@ var done: bool = false
 func _ready() -> void:
 	$Goal.hide()
 	$countdown.hide()
-	
 
 func _process(delta: float) -> void:
 	$skorijo.text = str(skor_ijo)
 	$skorpink.text = str(skor_pink)
 	
 	if $HtpMg3.visible && Input.is_action_just_pressed("d"):
+		$AnimationPlayer2.play("fade")
+		await $AnimationPlayer2.animation_finished
 		$HtpMg3.hide()
-		await get_tree().create_timer(0.5).timeout
 		$AnimationPlayer2.play("countdown")
 		await $AnimationPlayer2.animation_finished
 		alien_ijo.start = true
