@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cabafcw20ahqy"]
+[gd_scene load_steps=32 format=3 uid="uid://cabafcw20ahqy"]
 
 [ext_resource type="Texture2D" uid="uid://dpjuoaqfwdtk7" path="res://Assets/Temp/RunnerTileSet.png" id="1_n6olu"]
 [ext_resource type="Script" uid="uid://cdvmlkl0ebbf0" path="res://Main/Minigame_1/Scenes/minigame_1.gd" id="1_p582i"]
@@ -9,11 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="6_lefcr"]
 [ext_resource type="Texture2D" uid="uid://yholhbxohkee" path="res://Assets/UI/PLAYER 1.png" id="7_mgptm"]
 [ext_resource type="Texture2D" uid="uid://dsih3agbaega6" path="res://Assets/UI/player 2.png" id="8_p582i"]
+[ext_resource type="Texture2D" uid="uid://6imx8k166fae" path="res://Assets/Background/Planet.png" id="8_qksly"]
+[ext_resource type="Texture2D" uid="uid://c0g4p3un8osd5" path="res://Assets/Background/Bintang.png" id="9_0117v"]
 [ext_resource type="PackedScene" uid="uid://b7rwhhsfh6a41" path="res://Main/Minigame_1/Scenes/health_bar_pink.tscn" id="10_8wrh5"]
 [ext_resource type="PackedScene" uid="uid://bsnuaull2plqb" path="res://Main/Minigame_1/Scenes/health_bar_ijo.tscn" id="10_103xj"]
 [ext_resource type="FontFile" uid="uid://0u7tsat4cl15" path="res://Assets/Fonts/ca.ttf" id="12_103xj"]
 [ext_resource type="Script" uid="uid://cptxa1qx0boqb" path="res://Main/Minigame_1/Scenes/label.gd" id="13_tup42"]
 [ext_resource type="Texture2D" uid="uid://b8301apjefkpf" path="res://Assets/UI/htp mg1.png" id="14_x30k6"]
+[ext_resource type="Texture2D" uid="uid://dng6up5ibmlas" path="res://Assets/UI/PRESS D TO CONTINUE.png" id="17_hlu7h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibahl"]
 texture = ExtResource("1_n6olu")
@@ -563,6 +566,70 @@ tracks/10/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PressDToContinue:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("HtpMg1:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x30k6"]
+resource_name = "countdown"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("countdown:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1", "START!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("countdown:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("countdown:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_8wrh5"]
 resource_name = "win_scene"
@@ -678,50 +745,38 @@ tracks/8/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_x30k6"]
-resource_name = "countdown"
-length = 3.5
+[sub_resource type="Animation" id="Animation_hlu7h"]
+resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("countdown:text")
+tracks/0/path = NodePath("PressDToContinue:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": ["3", "2", "1", "START!"]
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("countdown:modulate")
+tracks/1/path = NodePath("HtpMg1:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("countdown:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
 _data = {
 &"RESET": SubResource("Animation_103xj"),
 &"countdown": SubResource("Animation_x30k6"),
+&"fade": SubResource("Animation_hlu7h"),
 &"win_scene": SubResource("Animation_8wrh5")
 }
 
@@ -792,8 +847,26 @@ script = ExtResource("5_xuc20")
 motion_mirroring = Vector2(0, 3465)
 
 [node name="VerticalBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(575, 1668)
+texture_filter = 1
+position = Vector2(606, 1670)
 texture = ExtResource("6_lefcr")
+
+[node name="planet" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 880)
+
+[node name="Planet" type="Sprite2D" parent="ParallaxBackground/planet"]
+texture_filter = 1
+position = Vector2(581, 376)
+texture = ExtResource("8_qksly")
+
+[node name="star" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(0, 877.5)
+
+[node name="Bintang" type="Sprite2D" parent="ParallaxBackground/star"]
+texture_filter = 1
+position = Vector2(583, 373)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_0117v")
 
 [node name="Player1" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -852,6 +925,10 @@ script = ExtResource("13_tup42")
 [node name="HtpMg1" type="Sprite2D" parent="."]
 position = Vector2(596, 249)
 texture = ExtResource("14_x30k6")
+
+[node name="PressDToContinue" type="Sprite2D" parent="."]
+position = Vector2(598, 637)
+texture = ExtResource("17_hlu7h")
 
 [node name="countdown" type="Label" parent="."]
 offset_left = 271.0

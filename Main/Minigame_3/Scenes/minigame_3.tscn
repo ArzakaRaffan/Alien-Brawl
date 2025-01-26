@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://ukphvc35c2ce"]
+[gd_scene load_steps=53 format=4 uid="uid://ukphvc35c2ce"]
 
 [ext_resource type="Script" uid="uid://fnaumyf4gmcc" path="res://Main/Minigame_3/Scenes/minigame_3.gd" id="1_3qu0v"]
 [ext_resource type="PackedScene" uid="uid://blipk30fggqn4" path="res://Main/Minigame_3/Scenes/alien_ijo_minigame3.tscn" id="2_ryypi"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://yholhbxohkee" path="res://Assets/UI/PLAYER 1.png" id="18_d15xd"]
 [ext_resource type="Texture2D" uid="uid://dsih3agbaega6" path="res://Assets/UI/player 2.png" id="19_vnyij"]
 [ext_resource type="Texture2D" uid="uid://bf8gwijad15yg" path="res://Assets/UI/htp mg 3.png" id="20_vnyij"]
+[ext_resource type="Texture2D" uid="uid://dng6up5ibmlas" path="res://Assets/UI/PRESS D TO CONTINUE.png" id="21_ntgvw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6t6k"]
 texture = ExtResource("7_5rbur")
@@ -500,6 +501,70 @@ tracks/10/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("HtpMg3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PressDToContinue:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x30k6"]
+resource_name = "countdown"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("countdown:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["3", "2", "1", "START!"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("countdown:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("countdown:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
 [sub_resource type="Animation" id="Animation_8wrh5"]
 resource_name = "win_scene"
@@ -615,50 +680,38 @@ tracks/8/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_x30k6"]
-resource_name = "countdown"
-length = 3.5
+[sub_resource type="Animation" id="Animation_khvc6"]
+resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("countdown:text")
+tracks/0/path = NodePath("HtpMg3:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": ["3", "2", "1", "START!"]
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("countdown:modulate")
+tracks/1/path = NodePath("PressDToContinue:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 3, 3.5),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("countdown:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.5),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
 _data = {
 &"RESET": SubResource("Animation_103xj"),
 &"countdown": SubResource("Animation_x30k6"),
+&"fade": SubResource("Animation_khvc6"),
 &"win_scene": SubResource("Animation_8wrh5")
 }
 
@@ -889,9 +942,15 @@ position = Vector2(250, 120)
 texture = ExtResource("19_vnyij")
 
 [node name="HtpMg3" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(786, 406)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("20_vnyij")
+
+[node name="PressDToContinue" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(774, 708)
+texture = ExtResource("21_ntgvw")
 
 [connection signal="body_entered" from="gawang_ijo" to="." method="_on_gawang_ijo_body_entered"]
 [connection signal="body_entered" from="gawang_pink" to="." method="_on_gawang_pink_body_entered"]
