@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvg3k5bui5uyj"
+path="res://.godot/imported/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3-ba3173a942beedaaf6e0113cd6ab46b9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Minigame 2/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3"
+dest_files=["res://.godot/imported/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3-ba3173a942beedaaf6e0113cd6ab46b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

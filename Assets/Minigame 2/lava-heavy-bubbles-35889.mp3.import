@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://14gbxcs285xs"
+path="res://.godot/imported/lava-heavy-bubbles-35889.mp3-844be976174b60ec36ea232c71d1061a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Minigame 2/lava-heavy-bubbles-35889.mp3"
+dest_files=["res://.godot/imported/lava-heavy-bubbles-35889.mp3-844be976174b60ec36ea232c71d1061a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

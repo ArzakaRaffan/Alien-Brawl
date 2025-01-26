@@ -334,6 +334,7 @@ position = Vector2(1100, 36)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("14_0t3wm")]
+visible = false
 
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]

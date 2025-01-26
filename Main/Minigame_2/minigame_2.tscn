@@ -1,4 +1,4 @@
-[gd_scene load_steps=724 format=3 uid="uid://m8dmy81d670i"]
+[gd_scene load_steps=735 format=3 uid="uid://m8dmy81d670i"]
 
 [ext_resource type="Script" uid="uid://xthi474onr3s" path="res://Main/Minigame_2/minigame_2.gd" id="1_rv4k8"]
 [ext_resource type="Texture2D" uid="uid://ds4mmno8mo3l0" path="res://Assets/Character/AlienIjo_Lose/AlienPink_Metal_Idle.png" id="2_1inb0"]
@@ -15,14 +15,25 @@
 [ext_resource type="Texture2D" uid="uid://csvyygqw5tw8f" path="res://Assets/Minigame 2/Horizontal BG.png" id="6_65m4p"]
 [ext_resource type="Texture2D" uid="uid://b2sdmpjn8agij" path="res://Assets/Character/AlienIjo_Lose/AlienIjo_Metal_Died.png" id="6_hsoe2"]
 [ext_resource type="Texture2D" uid="uid://bahd4hwak1pdv" path="res://Assets/Character/AlienIjo_Lose/AlienPink_Metal_Win.png" id="6_vsny0"]
+[ext_resource type="AudioStream" uid="uid://c4ar4s35tytxu" path="res://Assets/Minigame 2/jump1.wav" id="8_oqf18"]
 [ext_resource type="Texture2D" uid="uid://bblr1s0y6axcp" path="res://Assets/Character/AlienIjo_Lose2/AlienIjo_Metal_Lose.png" id="9_m4gp0"]
+[ext_resource type="AudioStream" uid="uid://4sym25ocet1f" path="res://Assets/Minigame 2/hitHurt1.wav" id="9_r06qm"]
 [ext_resource type="Texture2D" uid="uid://6eu6ybowgyj1" path="res://Assets/Minigame 2/RisingStone1_RFL/RisingStone0_RFLB.png" id="9_x07eo"]
 [ext_resource type="Texture2D" uid="uid://c0sbih0temyvd" path="res://Assets/Minigame 2/RisingStone1_RFL/RisingStone1_RFL.png" id="10_1inb0"]
 [ext_resource type="FontFile" uid="uid://bf46ohq5r38l8" path="res://Assets/Minigame 2/ca.ttf" id="10_xsol5"]
 [ext_resource type="Texture2D" uid="uid://ivtkpx5wgc7v" path="res://Assets/Character/AlienIjo_Lose/AlienIjo_Win.png" id="11_nvl5t"]
+[ext_resource type="AudioStream" uid="uid://ifhvi08jbmol" path="res://Assets/Minigame 2/jump2.wav" id="14_w7d6c"]
+[ext_resource type="AudioStream" uid="uid://w0vxc35eo7vv" path="res://Assets/Minigame 2/hitHurt2.wav" id="16_qw8qt"]
 [ext_resource type="FontFile" uid="uid://0u7tsat4cl15" path="res://Assets/Fonts/ca.ttf" id="21_03e8n"]
 [ext_resource type="Script" uid="uid://cptxa1qx0boqb" path="res://Main/Minigame_1/Scenes/label.gd" id="22_nvh8v"]
 [ext_resource type="Texture2D" uid="uid://cvmoaamf5i737" path="res://Assets/Minigame 2/Group 23.png" id="23_nvh8v"]
+[ext_resource type="AudioStream" uid="uid://14gbxcs285xs" path="res://Assets/Minigame 2/lava-heavy-bubbles-35889.mp3" id="24_veyjx"]
+[ext_resource type="AudioStream" uid="uid://b38iswwohip01" path="res://Assets/Minigame 2/game-countdown-62-199828.mp3" id="25_i74ye"]
+[ext_resource type="AudioStream" uid="uid://dvg3k5bui5uyj" path="res://Assets/Minigame 2/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3" id="30_qw8qt"]
+[ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="31_kmbn2"]
+[ext_resource type="AudioStream" uid="uid://do0pq5vxuklg1" path="res://Assets/Minigame 2/cute-character-wee-1-188162.mp3" id="31_ya41r"]
+[ext_resource type="AudioStream" uid="uid://b6vjoweajdqtl" path="res://Assets/Minigame 2/cute-character-wee-2-188161.mp3" id="32_4ltmw"]
+[ext_resource type="AudioStream" uid="uid://byfe2xqrj1twx" path="res://Assets/Minigame 2/win-brass-fanfare-reverberated-146263.mp3" id="33_fajgf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s62hm"]
 atlas = ExtResource("2_1inb0")
@@ -5688,6 +5699,30 @@ tracks/10/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cute-character-wee-1-188162:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-5.012]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Cute-character-wee-2-188161:volume_db")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-5.012]
+}
 
 [sub_resource type="Animation" id="Animation_x30k6"]
 resource_name = "countdown"
@@ -5728,10 +5763,38 @@ tracks/2/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Game-countdown-62-199828")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pixel-fight-8-bit-arcade-music-background-music-for-video-208775")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_8wrh5"]
 resource_name = "win_scene"
-length = 3.0
+length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -5842,6 +5905,44 @@ tracks/8/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"quit_lobby"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Cute-character-wee-1-188162:volume_db")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(5.01333, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-5.012, -80.0]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Cute-character-wee-2-188161:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(5.01333, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-5.012, -80.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
 _data = {
@@ -5887,6 +5988,13 @@ offset = Vector2(-4, 89)
 region_enabled = true
 region_rect = Rect2(1794, 0, 200, 336)
 
+[node name="Jump1" type="AudioStreamPlayer" parent="Player1"]
+stream = ExtResource("8_oqf18")
+volume_db = -7.0
+
+[node name="HitHurt1" type="AudioStreamPlayer" parent="Player1"]
+stream = ExtResource("9_r06qm")
+
 [node name="Player2" type="AnimatedSprite2D" parent="."]
 z_index = 100
 texture_filter = 1
@@ -5918,6 +6026,13 @@ texture = ExtResource("5_x07eo")
 offset = Vector2(-4, 89)
 region_enabled = true
 region_rect = Rect2(1794, 0, 200, 336)
+
+[node name="Jump2" type="AudioStreamPlayer" parent="Player2"]
+stream = ExtResource("14_w7d6c")
+volume_db = -7.0
+
+[node name="HitHurt2" type="AudioStreamPlayer" parent="Player2"]
+stream = ExtResource("16_qw8qt")
 
 [node name="TempMinigame2" type="Sprite2D" parent="."]
 visible = false
@@ -6319,6 +6434,42 @@ vertical_alignment = 1
 libraries = {
 &"": SubResource("AnimationLibrary_103xj")
 }
+
+[node name="Lava-heavy-bubbles-35889" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(88, 92)
+stream = ExtResource("24_veyjx")
+volume_db = 8.432
+autoplay = true
+parameters/looping = true
+
+[node name="Game-countdown-62-199828" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-58, 651)
+stream = ExtResource("25_i74ye")
+
+[node name="Pixel-fight-8-bit-arcade-music-background-music-for-video-208775" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_qw8qt")
+volume_db = -13.117
+pitch_scale = 1.25
+parameters/looping = true
+
+[node name="Cute-character-wee-1-188162" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_ya41r")
+volume_db = -5.012
+parameters/looping = true
+
+[node name="Cute-character-wee-2-188161" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("32_4ltmw")
+volume_db = -5.012
+parameters/looping = true
+
+[node name="Win-brass-fanfare-reverberated-146263" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_fajgf")
+volume_db = -2.506
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource("31_kmbn2")]
+visible = false
 
 [connection signal="animation_finished" from="Player1" to="." method="_on_player_1_animation_finished"]
 [connection signal="animation_finished" from="Player2" to="." method="_on_player_2_animation_finished"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcb5vcq0ksbyv"]
+[gd_scene load_steps=9 format=3 uid="uid://dcb5vcq0ksbyv"]
 
 [ext_resource type="Shader" uid="uid://bowfx1du66x3p" path="res://Main/Transition/Transition.gdshader" id="1_45auw"]
 [ext_resource type="Texture2D" uid="uid://de7rsrydh047g" path="res://Main/Transition/6027-251382cc.jpg" id="2_45auw"]
+[ext_resource type="AudioStream" uid="uid://cbrsmsbjdmexb" path="res://Main/Transition/cartoon-spin-7120.mp3" id="3_brm2i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yb6ni"]
 shader = ExtResource("1_45auw")
@@ -39,6 +40,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.0, -0.01]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.5],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_brm2i"]
 resource_name = "fade_out"
@@ -54,6 +69,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.01, 1.0]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer2D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kyhd5"]
@@ -76,3 +108,7 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_kyhd5")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_brm2i")
+volume_db = 24.0

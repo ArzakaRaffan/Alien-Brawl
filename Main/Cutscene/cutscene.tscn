@@ -1,12 +1,15 @@
-[gd_scene load_steps=79 format=3 uid="uid://bafxw4b7q46gf"]
+[gd_scene load_steps=85 format=3 uid="uid://bafxw4b7q46gf"]
 
 [ext_resource type="Texture2D" uid="uid://byv0n8rqjkjnv" path="res://Assets/Cutscene/Scene1.png" id="1_neuw0"]
+[ext_resource type="Script" uid="uid://tq38q2meqdbv" path="res://Main/Cutscene/cutscene.gd" id="1_v0a8k"]
+[ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="2_6ypp2"]
 [ext_resource type="Texture2D" uid="uid://ba3hr14ngk72c" path="res://Assets/Cutscene/Scene2.png" id="2_o4gc3"]
 [ext_resource type="Texture2D" uid="uid://b00xst5h8d7lp" path="res://Assets/Cutscene/Scene3.png" id="3_v0a8k"]
 [ext_resource type="Texture2D" uid="uid://dfm8fjpjbuyui" path="res://Assets/Cutscene/Scene4.png" id="4_6ypp2"]
 [ext_resource type="Texture2D" uid="uid://cqlxuf0bakoyr" path="res://Assets/Cutscene/Scene5.png" id="5_efbds"]
 [ext_resource type="Texture2D" uid="uid://b0sxeun030gn1" path="res://Assets/Cutscene/Scene6.png" id="6_5f1iq"]
 [ext_resource type="Texture2D" uid="uid://42neletyrc65" path="res://Assets/Cutscene/Scene7.png" id="7_ts73p"]
+[ext_resource type="FontFile" uid="uid://hql7l2t1vplo" path="res://Assets/Fonts/victor-pixel.ttf" id="9_6ypp2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6454"]
 atlas = ExtResource("1_neuw0")
@@ -501,12 +504,70 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_barxp")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_efbds"]
+resource_name = "new_animation"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["“Every 100 years, the galaxy witnesses one of the greatest celebrations of all time...”", "“Welcome to the Alien Brawl Festival!\"", "“Here on The Moon, aliens from all corners of the galaxy gather—not to wage wars, but to have fun!”
+"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"goto_lobby"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5f1iq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["“Every 100 years, the galaxy witnesses one of the greatest celebrations of all time...”"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ts73p"]
+_data = {
+&"RESET": SubResource("Animation_5f1iq"),
+&"new_animation": SubResource("Animation_efbds")
+}
+
 [node name="Cutscene" type="Node2D"]
+script = ExtResource("1_v0a8k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource("2_6ypp2")]
+visible = false
 
 [node name="TextureRect" type="ColorRect" parent="."]
 offset_left = -10.0
@@ -524,3 +585,19 @@ autoplay = "default"
 frame_progress = 0.322328
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ts73p")
+}
+autoplay = "new_animation"
+
+[node name="Label" type="Label" parent="."]
+offset_top = 82.0
+offset_right = 1601.0
+offset_bottom = 259.0
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("9_6ypp2")
+theme_override_font_sizes/font_size = 32
+text = "“Every 100 years, the galaxy witnesses one of the greatest celebrations of all time...”"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
