@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hrvlcj0e7c6o"
-path="res://.godot/imported/Spaceship.png-e36d046ff12b64b9fa7700238fd77e77.ctex"
+uid="uid://ca2jyhw72vxt8"
+path="res://.godot/imported/Frame 16 (1).png-8510039c35957aecc2fdf8d209976e69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Spaceship.png"
-dest_files=["res://.godot/imported/Spaceship.png-e36d046ff12b64b9fa7700238fd77e77.ctex"]
+source_file="res://Assets/Lobby/Frame 16 (1).png"
+dest_files=["res://.godot/imported/Frame 16 (1).png-8510039c35957aecc2fdf8d209976e69.ctex"]
 
 [params]
 

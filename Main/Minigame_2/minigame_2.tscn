@@ -1,4 +1,4 @@
-[gd_scene load_steps=717 format=3 uid="uid://m8dmy81d670i"]
+[gd_scene load_steps=722 format=3 uid="uid://m8dmy81d670i"]
 
 [ext_resource type="Script" uid="uid://xthi474onr3s" path="res://Main/Minigame_2/minigame_2.gd" id="1_rv4k8"]
 [ext_resource type="Texture2D" uid="uid://ds4mmno8mo3l0" path="res://Assets/Character/AlienIjo_Lose/AlienPink_Metal_Idle.png" id="2_1inb0"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://c0sbih0temyvd" path="res://Assets/Minigame 2/RisingStone1_RFL/RisingStone1_RFL.png" id="10_1inb0"]
 [ext_resource type="FontFile" uid="uid://bf46ohq5r38l8" path="res://Assets/Minigame 2/ca.ttf" id="10_xsol5"]
 [ext_resource type="Texture2D" uid="uid://ivtkpx5wgc7v" path="res://Assets/Character/AlienIjo_Lose/AlienIjo_Win.png" id="11_nvl5t"]
+[ext_resource type="FontFile" uid="uid://0u7tsat4cl15" path="res://Assets/Fonts/ca.ttf" id="21_03e8n"]
+[ext_resource type="Script" uid="uid://cptxa1qx0boqb" path="res://Main/Minigame_1/Scenes/label.gd" id="22_nvh8v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s62hm"]
 atlas = ExtResource("2_1inb0")
@@ -539,21 +541,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_mrda1"]
-resource_name = "oof"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.433333, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.435294, 0.34902, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_woiba"]
 length = 0.001
 tracks/0/type = "value"
@@ -567,6 +554,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mrda1"]
+resource_name = "oof"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.435294, 0.34902, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6do10"]
@@ -1611,21 +1613,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="Animation" id="Animation_yhaqg"]
-resource_name = "oof"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.433333, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 0.436572, 0.350594, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_uau2c"]
 length = 0.001
 tracks/0/type = "value"
@@ -1639,6 +1626,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_yhaqg"]
+resource_name = "oof"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.436572, 0.350594, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r1crn"]
@@ -5082,48 +5084,6 @@ _data = {
 &"start": SubResource("Animation_m4gp0")
 }
 
-[sub_resource type="Animation" id="Animation_tr0ob"]
-resource_name = "start"
-length = 0.6
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"default", 1.0, false],
-"method": &"play"
-}]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label4:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.401196, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Label4:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-85, -193), Vector2(-85, -129)]
-}
-
 [sub_resource type="Animation" id="Animation_oqf18"]
 length = 0.001
 tracks/0/type = "value"
@@ -5190,6 +5150,48 @@ tracks/1/keys = {
 "args": [],
 "method": &"queue_free"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_tr0ob"]
+resource_name = "start"
+length = 0.6
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.401196, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-85, -193), Vector2(-85, -129)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w7d6c"]
@@ -5549,6 +5551,225 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_103xj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [100]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_colors/font_shadow_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_outline_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.203922, 0.0509804, 0.266667, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:theme_override_constants/shadow_offset_y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:theme_override_constants/outline_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:theme_override_constants/shadow_outline_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [21]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_8wrh5"]
+resource_name = "win_scene"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.751223, 0.92, 1.16667, 1.63333, 2.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0.797334, 0.765312, 0.486725, 0.144097), Color(0.976471, 0.937255, 0.596078, 0.176471), Color(0.976471, 0.937255, 0.596078, 0.176471), Color(0, 0, 0, 0), Color(0.976471, 0.937255, 0.596078, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.06667, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [200, 100]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["PLAYER 1 WINS", "PLAYER 2 WINS"],
+"method": &"type"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_colors/font_shadow_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.751223, 0.920854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:theme_override_colors/font_outline_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.751223, 0.920854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.203922, 0.0509804, 0.266667, 0), Color(0, 0, 0, 0), Color(0.203922, 0.0509804, 0.266667, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:theme_override_constants/shadow_offset_y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, null, 8]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label:theme_override_constants/outline_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, null, 17]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label:theme_override_constants/shadow_outline_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.751223, 0.920854),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, null, 21]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(-0.0666667, 0.710834, 0.735067),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_103xj"]
+_data = {
+&"RESET": SubResource("Animation_103xj"),
+&"win_scene": SubResource("Animation_8wrh5")
+}
 
 [node name="Minigame2" type="Node2D"]
 script = ExtResource("1_rv4k8")
@@ -5969,6 +6190,28 @@ position = Vector2(535, 492)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_520rk")
 frame_progress = 0.860228
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_103xj")
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 1000
+offset_right = 1600.0
+offset_bottom = 900.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 17
+theme_override_constants/shadow_outline_size = 21
+theme_override_fonts/font = ExtResource("21_03e8n")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("22_nvh8v")
 
 [connection signal="animation_finished" from="Player1" to="." method="_on_player_1_animation_finished"]
 [connection signal="animation_finished" from="Player2" to="." method="_on_player_2_animation_finished"]
