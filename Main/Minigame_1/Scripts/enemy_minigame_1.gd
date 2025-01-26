@@ -17,6 +17,7 @@ var is_win: bool = false
 @onready var darah_pink: ProgressBar = $"../DarahPink"
 @onready var label: Label = $"../Label"
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@onready var transition: ColorRect = $"../CanvasLayer/Transition"
 
 
 func _physics_process(delta: float) -> void:
@@ -33,6 +34,11 @@ func _physics_process(delta: float) -> void:
 		label.type("PLAYER 1\nWINS")
 		label.show()
 		animation_player.play("win_scene")
+		await animation_player.animation_finished
+		await get_tree().create_timer(1).timeout
+		transition.get_child(0).play("fade_out")
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")
 
 	if is_dead or is_win:
 		return
