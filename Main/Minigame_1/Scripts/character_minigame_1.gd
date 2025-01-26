@@ -18,6 +18,8 @@ var is_throwing: bool = false
 var is_dead: bool = false
 @onready var label: Label = $"../Label"
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@onready var transition: ColorRect = $"../CanvasLayer/Transition"
+
 
 func _physics_process(delta: float) -> void:
 	if alienpink.health == 0 and not is_win:
@@ -33,6 +35,11 @@ func _physics_process(delta: float) -> void:
 		label.add_theme_color_override("font_color", Color.from_rgba8(181, 219, 116, 1))
 		label.show()
 		animation_player.play("win_scene")
+		await animation_player.animation_finished
+		await get_tree().create_timer(1).timeout
+		transition.get_child(0).play("fade_out")
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")
 	
 	if is_dead or is_win:
 		return

@@ -8,6 +8,8 @@ var gawang_abler: bool = true
 var done: bool = false
 
 func _ready() -> void:
+	$CanvasLayer/Transition.show()
+	$CanvasLayer/Transition.get_child(0).play("fade_in")
 	$Goal.hide()
 	$countdown.hide()
 
@@ -23,7 +25,6 @@ func _process(delta: float) -> void:
 		await $AnimationPlayer2.animation_finished
 		alien_ijo.start = true
 		alien_pink.start = true
-		
 	
 	if skor_ijo == 3 and not done:
 		done = true
@@ -34,6 +35,10 @@ func _process(delta: float) -> void:
 		$Label.type("PLAYER 1\nWINS")
 		$AnimationPlayer2.play("win_scene")
 		await $AnimationPlayer2.animation_finished
+		await get_tree().create_timer(1).timeout
+		$CanvasLayer/Transition.get_child(0).play("fade_out")
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")
 		return
 		
 	elif skor_pink == 3 and not done:
@@ -45,6 +50,10 @@ func _process(delta: float) -> void:
 		$Label.type("PLAYER 2\nWINS")
 		$AnimationPlayer2.play("win_scene")
 		await $AnimationPlayer2.animation_finished
+		await get_tree().create_timer(1).timeout
+		$CanvasLayer/Transition.get_child(0).play("fade_out")
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")
 		return
 
 func _on_gawang_ijo_body_entered(body: Node2D) -> void:

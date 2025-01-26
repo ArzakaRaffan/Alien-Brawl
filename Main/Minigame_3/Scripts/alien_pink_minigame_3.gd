@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 @onready var anim: AnimatedSprite2D = $anim
 var is_win: bool = false
 var is_lose: bool = false
+@onready var kicks: AudioStreamPlayer = $"../kicks"
 
 
 func _physics_process(delta: float) -> void:
@@ -54,6 +55,7 @@ func _physics_process(delta: float) -> void:
 		if collider is RigidBody2D:
 			var push_force = Vector2(40, 0)
 			collider.apply_central_impulse(push_force)
+			kicks.play()
 		else:
 			SPEED=-300
 			anim.flip_h = true
@@ -63,6 +65,7 @@ func _physics_process(delta: float) -> void:
 		if collider is RigidBody2D:
 			var push_force = Vector2(-40, 0)
 			collider.apply_central_impulse(push_force)
+			kicks.play()
 		else:
 			SPEED=300
 			anim.flip_h = false

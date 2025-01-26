@@ -5888,6 +5888,7 @@ region_enabled = true
 region_rect = Rect2(1794, 0, 200, 336)
 
 [node name="Player2" type="AnimatedSprite2D" parent="."]
+visible = false
 z_index = 100
 texture_filter = 1
 position = Vector2(187, 726)
@@ -5978,17 +5979,17 @@ region_enabled = true
 region_rect = Rect2(1800, 2, 200, 358)
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D2" type="Sprite2D" parent="Tiles"]
+[node name="Sprite2D6" type="Sprite2D" parent="Tiles"]
 texture_filter = 1
-position = Vector2(99, 784)
+position = Vector2(267, 784)
 texture = ExtResource("5_x07eo")
 region_enabled = true
 region_rect = Rect2(1800, 2, 200, 358)
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D6" type="Sprite2D" parent="Tiles"]
+[node name="Sprite2D2" type="Sprite2D" parent="Tiles"]
 texture_filter = 1
-position = Vector2(267, 784)
+position = Vector2(99, 784)
 texture = ExtResource("5_x07eo")
 region_enabled = true
 region_rect = Rect2(1800, 2, 200, 358)
@@ -6319,6 +6320,8 @@ vertical_alignment = 1
 libraries = {
 &"": SubResource("AnimationLibrary_103xj")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="animation_finished" from="Player1" to="." method="_on_player_1_animation_finished"]
 [connection signal="animation_finished" from="Player2" to="." method="_on_player_2_animation_finished"]
