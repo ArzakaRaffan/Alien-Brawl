@@ -509,6 +509,21 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="Animation" id="Animation_5f1iq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["“Every 100 years, the galaxy witnesses one of the greatest celebrations of all time...”"]
+}
+
 [sub_resource type="Animation" id="Animation_efbds"]
 resource_name = "new_animation"
 length = 7.0
@@ -538,21 +553,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"goto_lobby"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_5f1iq"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["“Every 100 years, the galaxy witnesses one of the greatest celebrations of all time...”"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ts73p"]

@@ -3,6 +3,7 @@ class_name MC
 
 var SPEED = 300.0
 var fly:bool = false
+var fly2:bool = false
 const JUMP_VELOCITY = -400.0
 var bool_start:bool =false
 @onready var right: RayCast2D = $Right
@@ -25,6 +26,13 @@ func _physics_process(delta: float) -> void:
 		
 	if fly :
 		#velocity -= get_gravity() * delta/100000
+		rotation+= delta
+		if scale>Vector2(0,0) :
+			scale -= Vector2(0.01,0.01)
+		else :
+			queue_free()
+			
+	if fly2:
 		rotation+= delta
 		if scale>Vector2(0,0) :
 			scale -= Vector2(0.01,0.01)

@@ -900,7 +900,7 @@ motion_mirroring = Vector2(0, 3465)
 
 [node name="VerticalBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_filter = 1
-position = Vector2(606, 1670)
+position = Vector2(576, 1670)
 texture = ExtResource("6_lefcr")
 
 [node name="planet" type="ParallaxLayer" parent="ParallaxBackground"]
