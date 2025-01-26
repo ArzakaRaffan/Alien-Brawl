@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b17g3yrgu2thg"]
+[gd_scene load_steps=6 format=3 uid="uid://b17g3yrgu2thg"]
 
 [ext_resource type="Script" uid="uid://bbcs37t0hjg8r" path="res://Main/Minigame_1/Scripts/bullet.gd" id="1_3viis"]
 [ext_resource type="Texture2D" uid="uid://bugmvq5epec35" path="res://Assets/Background/pixil-frame-0.png" id="2_3viis"]
@@ -9,6 +9,10 @@ height = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wly0t"]
 radius = 6.0
+
+[sub_resource type="Curve" id="Curve_3viis"]
+_data = [Vector2(0.0642458, 1), 0.0, 0.0, 0, 0, Vector2(0.997207, 0.195509), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="bullet" type="Area2D"]
 scale = Vector2(1.5, 1.5)
@@ -24,8 +28,34 @@ shape = SubResource("CircleShape2D_wly0t")
 
 [node name="Pixil-frame-0" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-1.90735e-06, 0)
+position = Vector2(-2.27374e-13, 0)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_3viis")
+
+[node name="explosion" type="CPUParticles2D" parent="."]
+amount = 16
+lifetime = 0.8
+speed_scale = 1.5
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 4.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_3viis")
+color = Color(0.776471, 0.0392157, 0.8, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-1.33333, 4.66667)
+amount = 20
+lifetime = 0.35
+speed_scale = 1.3
+emission_shape = 2
+emission_sphere_radius = 6.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+color = Color(1, 0.976471, 0.760784, 1)
+hue_variation_max = 1.0
 
 [connection signal="body_entered" from="bullet_hitbox" to="." method="_on_bullet_hitbox_body_entered"]

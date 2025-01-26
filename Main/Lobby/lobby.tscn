@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://dwohe8lq6tv7h"]
+[gd_scene load_steps=32 format=4 uid="uid://dwohe8lq6tv7h"]
 
 [ext_resource type="Script" uid="uid://cl2c7jaabxv51" path="res://Main/Lobby/lobby.gd" id="1_7scs4"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_i4om5"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bwf72cgccxdgj" path="res://Assets/Lobby/UfoDead.png" id="9_k7066"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="13_6sal4"]
 [ext_resource type="Texture2D" uid="uid://c77m3p1r6hvmn" path="res://Assets/Lobby/Group 25.png" id="14_w4km5"]
+[ext_resource type="AudioStream" uid="uid://bdlxti5xwmnay" path="res://Assets/Music/LobbyMusic.mp3" id="14_w4km5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1cge"]
 texture = ExtResource("3_d5kpu")
@@ -778,6 +779,11 @@ position = Vector2(-3, 0)
 position = Vector2(119.5, 708)
 shape = SubResource("RectangleShape2D_w4km5")
 debug_color = Color(0.953922, 2.40654e-06, 0.551082, 0.42)
+[node name="lobbymusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_w4km5")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Single_Ufo/AreaSing" to="." method="_on_area_sing_body_entered"]
 [connection signal="body_entered" from="Multi_Ufo/AreaMult" to="." method="_on_area_mult_body_entered"]
