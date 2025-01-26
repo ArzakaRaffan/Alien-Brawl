@@ -16,8 +16,9 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if $HtpMg1.visible and Input.is_action_just_pressed("d"):
+		$AnimationPlayer.play("fade")
+		await $AnimationPlayer.animation_finished
 		$HtpMg1.hide()
-		await get_tree().create_timer(1).timeout
 		$AnimationPlayer.play("countdown")
 		await $AnimationPlayer.animation_finished
 		pink.start = true
