@@ -19,23 +19,29 @@ var is_dead: bool = false
 @onready var label: Label = $"../Label"
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 @onready var transition: ColorRect = $"../CanvasLayer/Transition"
+@onready var gothit: AudioStreamPlayer = $"../gothit"
+@onready var wehee: AudioStreamPlayer = $"../wehee"
 
 
 func _physics_process(delta: float) -> void:
 	if alienpink.health == 0 and not is_win:
 		is_win = true
 		$AnimatedSprite2D.play("win")
+		await get_tree().create_timer(1).timeout
 
 	if health == 0 and not is_dead:
 		is_dead = true
 		$AnimatedSprite2D.play("dead")
 		await $AnimatedSprite2D.animation_finished
+		wehee.play()
 		await get_tree().create_timer(2).timeout
 		label.type("PLAYER 2\nWINS")
 		label.add_theme_color_override("font_color", Color.from_rgba8(181, 219, 116, 1))
 		label.show()
+		wehee.play()
 		animation_player.play("win_scene")
 		await animation_player.animation_finished
+		wehee.play()
 		await get_tree().create_timer(1).timeout
 		transition.get_child(0).play("fade_out")
 		await get_tree().create_timer(1.5).timeout
@@ -88,4 +94,5 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.name == "bullet_hitbox" and not is_dead:
 		health -= 20
 		darah_ijo.health = health
+		gothit.play()
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=4 uid="uid://ukphvc35c2ce"]
+[gd_scene load_steps=60 format=4 uid="uid://ukphvc35c2ce"]
 
 [ext_resource type="Script" uid="uid://fnaumyf4gmcc" path="res://Main/Minigame_3/Scenes/minigame_3.gd" id="1_3qu0v"]
 [ext_resource type="PackedScene" uid="uid://blipk30fggqn4" path="res://Main/Minigame_3/Scenes/alien_ijo_minigame3.tscn" id="2_ryypi"]
@@ -26,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://cv7puitws17hy" path="res://Assets/Music/win-brass-fanfare-reverberated-146263.mp3" id="23_4qboe"]
 [ext_resource type="AudioStream" uid="uid://2spuehpfnvg8" path="res://Assets/Music/goal sound.mp3" id="25_4qboe"]
 [ext_resource type="AudioStream" uid="uid://cwjmtnwnpjb7b" path="res://Assets/Music/minigame3_backsound.mp3" id="26_rr6nq"]
+[ext_resource type="AudioStream" uid="uid://kmva3rbb5qh3" path="res://Assets/Music/win_minigame2.mp3" id="27_440oo"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="27_vn1cl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6t6k"]
@@ -1047,6 +1048,9 @@ stream = ExtResource("26_rr6nq")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
+
+[node name="wohoo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_440oo")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
