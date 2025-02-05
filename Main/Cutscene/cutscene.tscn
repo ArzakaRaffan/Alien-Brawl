@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://bafxw4b7q46gf"]
+[gd_scene load_steps=86 format=3 uid="uid://bafxw4b7q46gf"]
 
 [ext_resource type="Texture2D" uid="uid://byv0n8rqjkjnv" path="res://Assets/Cutscene/Scene1.png" id="1_neuw0"]
 [ext_resource type="Script" uid="uid://tq38q2meqdbv" path="res://Main/Cutscene/cutscene.gd" id="1_v0a8k"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b0sxeun030gn1" path="res://Assets/Cutscene/Scene6.png" id="6_5f1iq"]
 [ext_resource type="Texture2D" uid="uid://42neletyrc65" path="res://Assets/Cutscene/Scene7.png" id="7_ts73p"]
 [ext_resource type="FontFile" uid="uid://hql7l2t1vplo" path="res://Assets/Fonts/victor-pixel.ttf" id="9_6ypp2"]
+[ext_resource type="AudioStream" uid="uid://blq5bh4dvdj5q" path="res://Assets/Cutscene/imaginatarium-sulyya-main-version-32858-03-11.mp3" id="11_efbds"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6454"]
 atlas = ExtResource("1_neuw0")
@@ -562,6 +563,7 @@ _data = {
 }
 
 [node name="Cutscene" type="Node2D"]
+position = Vector2(-1, 0)
 script = ExtResource("1_v0a8k")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -601,3 +603,7 @@ text = "“Every 100 years, the galaxy witnesses one of the greatest celebration
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Imaginatarium-sulyya-main-version-32858-03-11" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_efbds")
+autoplay = true
