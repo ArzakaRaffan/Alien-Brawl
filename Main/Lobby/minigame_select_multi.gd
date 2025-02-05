@@ -1,11 +1,15 @@
 extends Node2D
 
 @onready var alien_ijo: MC = $AlienIjo
+@onready var alien_pink: MC_Pink = $AlienPink
 @onready var animation_player: AnimationPlayer = $Multi_Ufo/AnimationPlayer
 @onready var area_mult: Area2D = $Multi_Ufo/AreaMult
 @onready var multi: Sprite2D = $Multi_Ufo/Multi
 @onready var multi_ufo: AnimationPlayer = $Multi_Ufo/AnimationPlayer
 @onready var transition: ColorRect = $CanvasLayer/Transition
+@onready var marker_single: Marker2D = $"Marker Single"
+var pulled = false
+
 
 func _ready() -> void:
 	transition.show()
@@ -19,6 +23,9 @@ func _ready() -> void:
 	alien_ijo.start()
 	await get_tree().create_timer(4).timeout
 	area_mult.position = Vector2(1539,700)
+	
+func _physics_process(delta: float) -> void:
+	pass
 
 func _on_area_mult_body_entered(body: Node2D) -> void:
 	if body is MC :

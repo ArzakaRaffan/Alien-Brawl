@@ -21,7 +21,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_area_sing_body_entered(body: Node2D) -> void:
 	if body is MC :
 		lobby_char.stop("single")
@@ -49,3 +48,17 @@ func _on_area_mult_body_entered(body: Node2D) -> void:
 		transition.get_child(0).play("fade_out")
 		await transition.get_child(0).animation_finished
 		get_tree().change_scene_to_file("res://Main/Lobby/minigame_select_multi.tscn")
+
+func _on_credit_body_entered(body: Node2D) -> void:
+	if body is MC :
+		$Credit/Group25.show()
+
+func _on_credit_body_exited(body: Node2D) -> void:
+	if body is MC:
+		$Credit/Group25.hide()
+
+func _on_exit_body_entered(body: Node2D) -> void:
+	if body is MC:
+		transition.get_child(0).play("fade_out")
+		await transition.get_child(0).animation_finished
+		get_tree().quit()

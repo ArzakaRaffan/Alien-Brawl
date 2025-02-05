@@ -1,4 +1,4 @@
-[gd_scene load_steps=735 format=3 uid="uid://m8dmy81d670i"]
+[gd_scene load_steps=736 format=3 uid="uid://m8dmy81d670i"]
 
 [ext_resource type="Script" uid="uid://xthi474onr3s" path="res://Main/Minigame_2/minigame_2.gd" id="1_rv4k8"]
 [ext_resource type="Texture2D" uid="uid://ds4mmno8mo3l0" path="res://Assets/Character/AlienIjo_Lose/AlienPink_Metal_Idle.png" id="2_1inb0"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://cvmoaamf5i737" path="res://Assets/Minigame 2/Group 23.png" id="23_nvh8v"]
 [ext_resource type="AudioStream" uid="uid://14gbxcs285xs" path="res://Assets/Minigame 2/lava-heavy-bubbles-35889.mp3" id="24_veyjx"]
 [ext_resource type="AudioStream" uid="uid://b38iswwohip01" path="res://Assets/Minigame 2/game-countdown-62-199828.mp3" id="25_i74ye"]
+[ext_resource type="Texture2D" uid="uid://dng6up5ibmlas" path="res://Assets/UI/PRESS D TO CONTINUE.png" id="28_4ltmw"]
 [ext_resource type="AudioStream" uid="uid://dvg3k5bui5uyj" path="res://Assets/Minigame 2/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3" id="30_qw8qt"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="31_kmbn2"]
 [ext_resource type="AudioStream" uid="uid://do0pq5vxuklg1" path="res://Assets/Minigame 2/cute-character-wee-1-188162.mp3" id="31_ya41r"]
@@ -5996,7 +5997,6 @@ volume_db = -7.0
 stream = ExtResource("9_r06qm")
 
 [node name="Player2" type="AnimatedSprite2D" parent="."]
-visible = false
 z_index = 100
 texture_filter = 1
 position = Vector2(187, 726)
@@ -6161,7 +6161,7 @@ metadata/_edit_lock_ = true
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ParallaxBackground/Parallax2D"]
 modulate = Color(0.495777, 0.243946, 0, 1)
 texture_filter = 1
-position = Vector2(359, 326)
+position = Vector2(359, 126)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_s62hm")
 autoplay = "default"
@@ -6410,8 +6410,12 @@ script = ExtResource("22_nvh8v")
 [node name="HtpMg1" type="Sprite2D" parent="."]
 z_index = 1000
 texture_filter = 1
-position = Vector2(800, 450)
+position = Vector2(800, 444)
 texture = ExtResource("23_nvh8v")
+
+[node name="PressDToContinue" type="Sprite2D" parent="HtpMg1"]
+position = Vector2(0, 352)
+texture = ExtResource("28_4ltmw")
 
 [node name="countdown" type="Label" parent="."]
 visible = false

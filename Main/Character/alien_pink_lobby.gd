@@ -9,6 +9,8 @@ const JUMP_VELOCITY = -400.0
 @onready var anim: AnimatedSprite2D = $anim
 @onready var right2: RayCast2D = $Right2
 @onready var left2: RayCast2D = $Left2
+@onready var marker_single: Marker2D = $"../Marker Single"
+@onready var marker_multi: Marker2D = $"../Marker Multi"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -48,7 +50,13 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	
-func stop() :
+func stop(type:String) :
+	if type == "multi":
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "position", marker_multi.position, 2)
+	else :
+		var tween = get_tree().create_tween()
+		tween.tween_property(self, "position", marker_single.position, 2)
 	SPEED = 0
 	fly = true
 	
