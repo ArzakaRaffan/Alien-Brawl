@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://ukphvc35c2ce"]
+[gd_scene load_steps=64 format=4 uid="uid://ukphvc35c2ce"]
 
 [ext_resource type="Script" uid="uid://fnaumyf4gmcc" path="res://Main/Minigame_3/Scenes/minigame_3.gd" id="1_3qu0v"]
 [ext_resource type="PackedScene" uid="uid://blipk30fggqn4" path="res://Main/Minigame_3/Scenes/alien_ijo_minigame3.tscn" id="2_ryypi"]
@@ -28,6 +28,10 @@
 [ext_resource type="AudioStream" uid="uid://cwjmtnwnpjb7b" path="res://Assets/Music/minigame3_backsound.mp3" id="26_rr6nq"]
 [ext_resource type="AudioStream" uid="uid://kmva3rbb5qh3" path="res://Assets/Music/win_minigame2.mp3" id="27_440oo"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="27_vn1cl"]
+[ext_resource type="Script" uid="uid://bun5td2oxidfe" path="res://Main/Lobby/anchors.gd" id="29_w5uyf"]
+[ext_resource type="Texture2D" uid="uid://dh4225gw5doro" path="res://Assets/Lobby/Control.png" id="30_neq1a"]
+[ext_resource type="FontFile" uid="uid://bf46ohq5r38l8" path="res://Assets/Minigame 2/ca.ttf" id="31_3n44i"]
+[ext_resource type="Texture2D" uid="uid://hfvrg71f1ydg" path="res://Assets/Minigame 2/arrows_right.png" id="32_kbwlr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6t6k"]
 texture = ExtResource("7_5rbur")
@@ -1057,6 +1061,154 @@ stream = ExtResource("27_440oo")
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("27_vn1cl")]
 visible = false
 
+[node name="Anchors" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(40.05, 22.444)
+script = ExtResource("29_w5uyf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Anchors"]
+layer = 100
+
+[node name="ButtonD" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -122.0
+offset_top = 753.0
+offset_right = 132.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("30_neq1a")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonD"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("31_3n44i")
+theme_override_font_sizes/font_size = 100
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonA" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -304.0
+offset_top = 753.0
+offset_right = -49.7997
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("30_neq1a")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonA"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("31_3n44i")
+theme_override_font_sizes/font_size = 100
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonRight" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 1058.0
+offset_top = 753.0
+offset_right = 1312.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("30_neq1a")
+
+[node name="Label6" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonRight"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(127.2, 139.442)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("32_kbwlr")
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
+[node name="ButtonLeft" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 876.0
+offset_top = 753.0
+offset_right = 1130.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("30_neq1a")
+
+[node name="Label8" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonLeft"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(119.861, 136.996)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("32_kbwlr")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
 [connection signal="body_entered" from="gawang_ijo" to="." method="_on_gawang_ijo_body_entered"]
 [connection signal="body_entered" from="gawang_pink" to="." method="_on_gawang_pink_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_up"]

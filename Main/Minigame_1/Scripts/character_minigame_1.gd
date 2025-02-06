@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 		wehee.play()
 		await get_tree().create_timer(2).timeout
 		label.type("PLAYER 2\nWINS")
-		label.add_theme_color_override("font_color", Color.from_rgba8(181, 219, 116, 1))
+		label.add_theme_color_override("font_color", Color(181/255.0, 219/255.0, 116/255.0, 1.0))
 		label.show()
 		wehee.play()
 		animation_player.play("win_scene")

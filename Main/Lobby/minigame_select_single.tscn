@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=22 format=4 uid="uid://dkebxcdu80utn"]
+=======
+[gd_scene load_steps=26 format=4 uid="uid://dkebxcdu80utn"]
+>>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
 
 [ext_resource type="Script" uid="uid://bxoor28ndiylv" path="res://Main/Lobby/minigame_select_single.gd" id="1_y46ut"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_xl8ah"]
@@ -14,6 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://bte02glnylhgo" path="res://Assets/Lobby/Frame 16.png" id="12_8cqjr"]
 [ext_resource type="Texture2D" uid="uid://bl62egecko4lw" path="res://Assets/Lobby/Frame 20.png" id="13_avf3n"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="14_0t3wm"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Script" uid="uid://bun5td2oxidfe" path="res://Main/Lobby/anchors.gd" id="15_m50gp"]
+[ext_resource type="Texture2D" uid="uid://dh4225gw5doro" path="res://Assets/Lobby/Control.png" id="16_rjad8"]
+[ext_resource type="FontFile" uid="uid://bf46ohq5r38l8" path="res://Assets/Minigame 2/ca.ttf" id="17_nb4qa"]
+[ext_resource type="Texture2D" uid="uid://hfvrg71f1ydg" path="res://Assets/Minigame 2/arrows_right.png" id="18_eq14m"]
+>>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56ukr"]
 texture = ExtResource("7_m50gp")
@@ -336,6 +347,160 @@ position = Vector2(1100, 36)
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("14_0t3wm")]
 visible = false
 
+<<<<<<< HEAD
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="LuckyBlocks/LuckyBlock3/Area2D" to="LuckyBlocks/LuckyBlock3" method="_on_area_2d_area_entered"]
+=======
+[node name="Anchors" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(40.05, 22.444)
+script = ExtResource("15_m50gp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Anchors"]
+layer = 100
+
+[node name="ButtonD" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -122.0
+offset_top = 753.0
+offset_right = 132.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("16_rjad8")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonD"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("17_nb4qa")
+theme_override_font_sizes/font_size = 100
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonA" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -304.0
+offset_top = 753.0
+offset_right = -49.7997
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("16_rjad8")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonA"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("17_nb4qa")
+theme_override_font_sizes/font_size = 100
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonRight" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 1058.0
+offset_top = 753.0
+offset_right = 1312.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("16_rjad8")
+
+[node name="Label6" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonRight"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(127.2, 139.442)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("18_eq14m")
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
+[node name="ButtonLeft" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 876.0
+offset_top = 753.0
+offset_right = 1130.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("16_rjad8")
+
+[node name="Label8" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonLeft"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(119.861, 136.996)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("18_eq14m")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
+[connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="LuckyBlocks/LuckyBlock3/Area2D" to="LuckyBlocks/LuckyBlock3" method="_on_area_2d_area_entered"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_up"]
+>>>>>>> 1197e13 (Update for mobile and export arrows to pngs)

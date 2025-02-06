@@ -1,4 +1,4 @@
-[gd_scene load_steps=736 format=3 uid="uid://m8dmy81d670i"]
+[gd_scene load_steps=741 format=3 uid="uid://m8dmy81d670i"]
 
 [ext_resource type="Script" uid="uid://xthi474onr3s" path="res://Main/Minigame_2/minigame_2.gd" id="1_rv4k8"]
 [ext_resource type="Texture2D" uid="uid://ds4mmno8mo3l0" path="res://Assets/Character/AlienIjo_Lose/AlienPink_Metal_Idle.png" id="2_1inb0"]
@@ -27,14 +27,19 @@
 [ext_resource type="FontFile" uid="uid://0u7tsat4cl15" path="res://Assets/Fonts/ca.ttf" id="21_03e8n"]
 [ext_resource type="Script" uid="uid://cptxa1qx0boqb" path="res://Main/Minigame_1/Scenes/label.gd" id="22_nvh8v"]
 [ext_resource type="Texture2D" uid="uid://cvmoaamf5i737" path="res://Assets/Minigame 2/Group 23.png" id="23_nvh8v"]
+[ext_resource type="Texture2D" uid="uid://7b40yvgk3jam" path="res://Assets/Minigame 2/arrows_left.png" id="24_37tdm"]
 [ext_resource type="AudioStream" uid="uid://14gbxcs285xs" path="res://Assets/Minigame 2/lava-heavy-bubbles-35889.mp3" id="24_veyjx"]
+[ext_resource type="Texture2D" uid="uid://bdg4yvp5bdcfu" path="res://Assets/Minigame 2/arrows.png" id="25_ajsv3"]
 [ext_resource type="AudioStream" uid="uid://b38iswwohip01" path="res://Assets/Minigame 2/game-countdown-62-199828.mp3" id="25_i74ye"]
+[ext_resource type="Texture2D" uid="uid://hfvrg71f1ydg" path="res://Assets/Minigame 2/arrows_right.png" id="26_msfce"]
 [ext_resource type="Texture2D" uid="uid://dng6up5ibmlas" path="res://Assets/UI/PRESS D TO CONTINUE.png" id="28_4ltmw"]
 [ext_resource type="AudioStream" uid="uid://dvg3k5bui5uyj" path="res://Assets/Minigame 2/pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3" id="30_qw8qt"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="31_kmbn2"]
 [ext_resource type="AudioStream" uid="uid://do0pq5vxuklg1" path="res://Assets/Minigame 2/cute-character-wee-1-188162.mp3" id="31_ya41r"]
 [ext_resource type="AudioStream" uid="uid://b6vjoweajdqtl" path="res://Assets/Minigame 2/cute-character-wee-2-188161.mp3" id="32_4ltmw"]
 [ext_resource type="AudioStream" uid="uid://byfe2xqrj1twx" path="res://Assets/Minigame 2/win-brass-fanfare-reverberated-146263.mp3" id="33_fajgf"]
+[ext_resource type="Script" uid="uid://bun5td2oxidfe" path="res://Main/Lobby/anchors.gd" id="39_msfce"]
+[ext_resource type="Texture2D" uid="uid://dh4225gw5doro" path="res://Assets/Lobby/Control.png" id="40_q8rii"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s62hm"]
 atlas = ExtResource("2_1inb0")
@@ -4997,7 +5002,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label3:modulate")
+tracks/1/path = NodePath("Label7:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5009,7 +5014,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label3:position")
+tracks/2/path = NodePath("Label7:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -5068,7 +5073,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label3:modulate")
+tracks/1/path = NodePath("Label7:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5080,7 +5085,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label3:position")
+tracks/2/path = NodePath("Label7:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -5102,7 +5107,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Label4:modulate")
+tracks/0/path = NodePath("Label9:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -5114,7 +5119,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label4:position")
+tracks/1/path = NodePath("Label9:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5185,7 +5190,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label4:modulate")
+tracks/1/path = NodePath("Label9:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5197,7 +5202,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label4:position")
+tracks/2/path = NodePath("Label9:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -5309,7 +5314,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label5:modulate")
+tracks/1/path = NodePath("Label8:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5321,7 +5326,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label5:position")
+tracks/2/path = NodePath("Label8:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -5380,7 +5385,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label5:modulate")
+tracks/1/path = NodePath("Label8:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -5392,7 +5397,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Label5:position")
+tracks/2/path = NodePath("Label8:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -6287,7 +6292,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_m4gp0")
 }
 
-[node name="Label3" type="Label" parent="Stone Template/stone_<"]
+[node name="Label3" type="Sprite2D" parent="Stone Template/stone_<"]
+position = Vector2(1, -19)
+scale = Vector2(0.397032, 0.384238)
+texture = ExtResource("24_37tdm")
+
+[node name="Label7" type="Label" parent="Stone Template/stone_<"]
+visible = false
 texture_filter = 1
 offset_left = -20.0
 offset_top = -44.0
@@ -6314,7 +6325,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_w7d6c")
 }
 
-[node name="Label4" type="Label" parent="Stone Template/stone_<>"]
+[node name="Label4" type="Sprite2D" parent="Stone Template/stone_<>"]
+position = Vector2(-3, -17)
+scale = Vector2(0.389633, 0.389633)
+texture = ExtResource("25_ajsv3")
+
+[node name="Label9" type="Label" parent="Stone Template/stone_<>"]
+visible = false
 texture_filter = 1
 offset_left = -85.0
 offset_top = -174.0
@@ -6344,7 +6361,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_i74ye")
 }
 
-[node name="Label5" type="Label" parent="Stone Template/stone_>"]
+[node name="Label5" type="Sprite2D" parent="Stone Template/stone_>"]
+position = Vector2(-2.99999, -16)
+scale = Vector2(0.397032, 0.384238)
+texture = ExtResource("26_msfce")
+
+[node name="Label8" type="Label" parent="Stone Template/stone_>"]
+visible = false
 texture_filter = 1
 offset_left = -92.0
 offset_top = -131.0
@@ -6476,5 +6499,153 @@ volume_db = -2.506
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("31_kmbn2")]
 visible = false
 
+[node name="Anchors" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(40.05, 22.444)
+script = ExtResource("39_msfce")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Anchors"]
+layer = 100
+
+[node name="ButtonD" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -122.0
+offset_top = 753.0
+offset_right = 132.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("40_q8rii")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonD"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("10_xsol5")
+theme_override_font_sizes/font_size = 100
+text = "D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonA" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = -304.0
+offset_top = 753.0
+offset_right = -49.7997
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("40_q8rii")
+
+[node name="Label5" type="Label" parent="Anchors/CanvasLayer/ButtonA"]
+modulate = Color(0.980392, 0.678431, 0.94902, 1)
+z_index = 2
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 67.4662
+offset_top = -70.1719
+offset_right = 157.466
+offset_bottom = 19.8281
+grow_vertical = 2
+scale = Vector2(1.53021, 1.53021)
+theme_override_colors/font_color = Color(0.976471, 0.937255, 0.596078, 1)
+theme_override_colors/font_shadow_color = Color(0.458824, 0.333333, 0.494118, 1)
+theme_override_colors/font_outline_color = Color(0.203922, 0.0509804, 0.266667, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 15
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("10_xsol5")
+theme_override_font_sizes/font_size = 100
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonRight" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 1058.0
+offset_top = 753.0
+offset_right = 1312.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("40_q8rii")
+
+[node name="Label6" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonRight"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(127.2, 139.442)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("26_msfce")
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
+[node name="ButtonLeft" type="TextureButton" parent="Anchors/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.72549)
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.23
+anchor_right = 0.275
+offset_left = 876.0
+offset_top = 753.0
+offset_right = 1130.2
+offset_bottom = 1009.0
+scale = Vector2(0.408807, 0.408807)
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("40_q8rii")
+
+[node name="Label8" type="Sprite2D" parent="Anchors/CanvasLayer/ButtonLeft"]
+modulate = Color(0.486275, 0.92549, 0.584314, 0.72549)
+position = Vector2(119.861, 136.996)
+scale = Vector2(0.971197, 0.939901)
+texture = ExtResource("26_msfce")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 243, 203, 177.436)
+
 [connection signal="animation_finished" from="Player1" to="." method="_on_player_1_animation_finished"]
 [connection signal="animation_finished" from="Player2" to="." method="_on_player_2_animation_finished"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonD" to="Anchors" method="_on_button_d_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonA" to="Anchors" method="_on_button_a_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonRight" to="Anchors" method="_on_button_right_button_up"]
+[connection signal="button_down" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_down"]
+[connection signal="button_up" from="Anchors/CanvasLayer/ButtonLeft" to="Anchors" method="_on_button_left_button_up"]
