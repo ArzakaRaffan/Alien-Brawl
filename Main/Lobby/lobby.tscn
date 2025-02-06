@@ -930,9 +930,7 @@ offset_right = 1600.0
 offset_bottom = 756.0
 theme_override_fonts/font = ExtResource("8_i4om5")
 theme_override_font_sizes/font_size = 48
-text = "CREDIT&
-SETTINGS"
->>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
+text = "CREDIT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
