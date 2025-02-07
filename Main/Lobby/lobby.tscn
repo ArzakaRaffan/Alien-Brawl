@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-[gd_scene load_steps=36 format=4 uid="uid://dwohe8lq6tv7h"]
-=======
 [gd_scene load_steps=40 format=4 uid="uid://dwohe8lq6tv7h"]
->>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
 
 [ext_resource type="Script" uid="uid://cl2c7jaabxv51" path="res://Main/Lobby/lobby.gd" id="1_7scs4"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_i4om5"]
 [ext_resource type="PackedScene" uid="uid://gaxyr5u5a0y2" path="res://Main/Character/alien_ijo_lobby.tscn" id="2_iqeee"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://6yjs8h66e5gw" path="res://Assets/Temp/Slide 16_9 - 11.png" id="2_leuo0"]
-[ext_resource type="Texture2D" uid="uid://dxi005q1nj863" path="res://Assets/Lobby/BG.png" id="3_46j45"]
-[ext_resource type="Texture2D" uid="uid://ccx5xds1rsiqw" path="res://Assets/Minigame 2/Tileset 1 1.jpg" id="3_d5kpu"]
-=======
 [ext_resource type="Texture2D" uid="uid://hfvrg71f1ydg" path="res://Assets/Minigame 2/arrows_right.png" id="2_jkc3a"]
 [ext_resource type="Script" uid="uid://bun5td2oxidfe" path="res://Main/Lobby/anchors.gd" id="2_jxs8b"]
 [ext_resource type="Texture2D" uid="uid://6yjs8h66e5gw" path="res://Assets/Temp/Slide 16_9 - 11.png" id="2_leuo0"]
@@ -19,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dxi005q1nj863" path="res://Assets/Lobby/BG.png" id="3_46j45"]
 [ext_resource type="Texture2D" uid="uid://ccx5xds1rsiqw" path="res://Assets/Minigame 2/Tileset 1 1.jpg" id="3_d5kpu"]
 [ext_resource type="Texture2D" uid="uid://dh4225gw5doro" path="res://Assets/Lobby/Control.png" id="4_5jjm1"]
->>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
 [ext_resource type="Texture2D" uid="uid://cskc4esqtmpum" path="res://Assets/Lobby/Bintang.png" id="4_24n1a"]
 [ext_resource type="Texture2D" uid="uid://b8o2bi3l4ll8g" path="res://Assets/Lobby/Ufo 2.png" id="5_6ygub"]
 [ext_resource type="Texture2D" uid="uid://cu2wwnbnig2ce" path="res://Assets/Lobby/UntitledArtwork1 10 1.png" id="5_d5kpu"]

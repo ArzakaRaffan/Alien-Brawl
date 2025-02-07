@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=22 format=4 uid="uid://dkebxcdu80utn"]
-=======
 [gd_scene load_steps=26 format=4 uid="uid://dkebxcdu80utn"]
->>>>>>> 1197e13 (Update for mobile and export arrows to pngs)
 
 [ext_resource type="Script" uid="uid://bxoor28ndiylv" path="res://Main/Lobby/minigame_select_single.gd" id="1_y46ut"]
 [ext_resource type="Texture2D" uid="uid://gotvexsj5rs" path="res://Assets/Background/Vertical BG.png" id="2_xl8ah"]
