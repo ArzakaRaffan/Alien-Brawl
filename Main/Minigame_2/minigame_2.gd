@@ -43,8 +43,8 @@ var def_cam_pos:Vector2
 @onready var label: Label = $Label
 var count = 0
 var cor_x = 512
-var cor_y1 = 392
-var cor_y2 = 726
+var cor_y1 = 262
+var cor_y2 = 596
 var p1:int
 var p2:int
 
