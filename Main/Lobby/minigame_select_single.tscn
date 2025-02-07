@@ -14,8 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://bte02glnylhgo" path="res://Assets/Lobby/Frame 16.png" id="12_8cqjr"]
 [ext_resource type="Texture2D" uid="uid://bl62egecko4lw" path="res://Assets/Lobby/Frame 20.png" id="13_avf3n"]
 [ext_resource type="PackedScene" uid="uid://dcb5vcq0ksbyv" path="res://Main/Transition/Transition.tscn" id="14_0t3wm"]
-<<<<<<< HEAD
-=======
 [ext_resource type="Script" uid="uid://bun5td2oxidfe" path="res://Main/Lobby/anchors.gd" id="15_m50gp"]
 [ext_resource type="Texture2D" uid="uid://dh4225gw5doro" path="res://Assets/Lobby/Control.png" id="16_rjad8"]
 [ext_resource type="FontFile" uid="uid://bf46ohq5r38l8" path="res://Assets/Minigame 2/ca.ttf" id="17_nb4qa"]
@@ -344,11 +342,6 @@ layer = 100
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("14_0t3wm")]
 visible = false
 
-<<<<<<< HEAD
-[connection signal="area_entered" from="LuckyBlocks/LuckyBlock/Area2D" to="LuckyBlocks/LuckyBlock" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="LuckyBlocks/LuckyBlock2/Area2D" to="LuckyBlocks/LuckyBlock2" method="_on_area_2d_area_entered"]
-[connection signal="area_entered" from="LuckyBlocks/LuckyBlock3/Area2D" to="LuckyBlocks/LuckyBlock3" method="_on_area_2d_area_entered"]
-=======
 [node name="Anchors" type="Control" parent="."]
 z_index = 1000
 layout_mode = 3
